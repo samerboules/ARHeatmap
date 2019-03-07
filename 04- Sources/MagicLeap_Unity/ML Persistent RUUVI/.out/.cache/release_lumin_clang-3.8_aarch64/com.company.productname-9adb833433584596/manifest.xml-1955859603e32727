@@ -1,0 +1,10 @@
+<manifest xmlns:ml="magicleap" ml:developer_id="0c3f9cd7-9a26-48cb-a925-50cb25f261b0" ml:package="com.company.productname" ml:version_code="1" ml:version_name="">
+  <application ml:min_api_level="3" ml:sdk_version="1.0" ml:visible_name="ML Persistent">
+    <uses-privilege ml:name="LowLatencyLightwear" />
+    <uses-privilege ml:name="ControllerPose" />
+    <uses-privilege ml:name="PwFoundObjRead" />
+    <component ml:binary_name="bin/Player.elf" ml:name=".fullscreen" ml:type="Fullscreen" ml:visible_name="ML Persistent">
+      <icon ml:model_folder="Icon/Model" ml:portal_folder="Icon/Portal" />
+    </component>
+  </application>
+</manifest>
