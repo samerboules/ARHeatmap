@@ -743,11 +743,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\samer.boules\\Documents\\GitHub\\AR_Office_Temperature\\04- Sources\\ReadFromConNXT\\ConNXTApi\\ConNXTApi\\ConNXTApi\\ConNXTApi.csproj",
+      "projectUniqueName": "C:\\Users\\samer.boules\\Documents\\GitHub\\AR_Office_Demo2\\04- Sources\\ReadFromConNXT\\ConNXTApi\\ConNXTApi\\ConNXTApi\\ConNXTApi.csproj",
       "projectName": "ConNXTApi",
-      "projectPath": "C:\\Users\\samer.boules\\Documents\\GitHub\\AR_Office_Temperature\\04- Sources\\ReadFromConNXT\\ConNXTApi\\ConNXTApi\\ConNXTApi\\ConNXTApi.csproj",
+      "projectPath": "C:\\Users\\samer.boules\\Documents\\GitHub\\AR_Office_Demo2\\04- Sources\\ReadFromConNXT\\ConNXTApi\\ConNXTApi\\ConNXTApi\\ConNXTApi.csproj",
       "packagesPath": "C:\\Users\\samer.boules\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\samer.boules\\Documents\\GitHub\\AR_Office_Temperature\\04- Sources\\ReadFromConNXT\\ConNXTApi\\ConNXTApi\\ConNXTApi\\obj\\",
+      "outputPath": "C:\\Users\\samer.boules\\Documents\\GitHub\\AR_Office_Demo2\\04- Sources\\ReadFromConNXT\\ConNXTApi\\ConNXTApi\\ConNXTApi\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
