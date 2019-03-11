@@ -1,0 +1,10 @@
+C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\ReadFromConNXT\ConNXTApi\ConNXTApi\ConNXTApi\bin\Debug\netcoreapp1.1\ConNXTApi.deps.json
+C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\ReadFromConNXT\ConNXTApi\ConNXTApi\ConNXTApi\bin\Debug\netcoreapp1.1\ConNXTApi.runtimeconfig.json
+C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\ReadFromConNXT\ConNXTApi\ConNXTApi\ConNXTApi\bin\Debug\netcoreapp1.1\ConNXTApi.runtimeconfig.dev.json
+C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\ReadFromConNXT\ConNXTApi\ConNXTApi\ConNXTApi\bin\Debug\netcoreapp1.1\ConNXTApi.dll
+C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\ReadFromConNXT\ConNXTApi\ConNXTApi\ConNXTApi\bin\Debug\netcoreapp1.1\ConNXTApi.pdb
+C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\ReadFromConNXT\ConNXTApi\ConNXTApi\ConNXTApi\obj\Debug\netcoreapp1.1\ConNXTApi.csproj.CoreCompileInputs.cache
+C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\ReadFromConNXT\ConNXTApi\ConNXTApi\ConNXTApi\obj\Debug\netcoreapp1.1\ConNXTApi.AssemblyInfoInputs.cache
+C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\ReadFromConNXT\ConNXTApi\ConNXTApi\ConNXTApi\obj\Debug\netcoreapp1.1\ConNXTApi.AssemblyInfo.cs
+C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\ReadFromConNXT\ConNXTApi\ConNXTApi\ConNXTApi\obj\Debug\netcoreapp1.1\ConNXTApi.dll
+C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\ReadFromConNXT\ConNXTApi\ConNXTApi\ConNXTApi\obj\Debug\netcoreapp1.1\ConNXTApi.pdb

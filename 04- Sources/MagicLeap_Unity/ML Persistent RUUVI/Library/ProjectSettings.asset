@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: ICT
-  productName: ICTRuuviData
+  productName: ICTAROffice
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -156,7 +156,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Lumin: com.ict.arofficedemo
+    Lumin: com.ict.aroffice
     Standalone: com.Company.ProductName
   buildNumber: {}
   AndroidBundleVersionCode: 1
@@ -577,10 +577,11 @@ PlayerSettings:
   scriptingBackend: {}
   il2cppCompilerConfiguration: {}
   incrementalIl2cppBuild: {}
-  allowUnsafeCode: 0
+  allowUnsafeCode: 1
   additionalIl2CppArgs: 
   scriptingRuntimeVersion: 1
-  apiCompatibilityLevelPerPlatform: {}
+  apiCompatibilityLevelPerPlatform:
+    Lumin: 6
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   metroPackageName: Template_Lightweight
@@ -663,12 +664,13 @@ PlayerSettings:
     m_ModelFolderPath: 
     m_PortalFolderPath: 
   luminCert:
-    m_CertPath: C:/Users/samer.boules/MagicLeap/MagicLeapCertificate/ict_mlcert.cert
+    m_CertPath: C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML
+      Persistent RUUVI/MagicLeapCertificate/ict_mlcert.cert
     m_PrivateKeyPath: 
   luminIsChannelApp: 0
   luminVersion:
-    m_VersionCode: 2
-    m_VersionName: 
+    m_VersionCode: 3
+    m_VersionName: connxt
   luminPrivilege:
   - PwFoundObjRead
   - ControllerPose

@@ -16,9 +16,9 @@
   },
   {
    "compression": 8,
-   "hash": "773cd286bb81978c1f6cf51f3746e44ec728c17c",
+   "hash": "ac3cb7cb7f3015819ee70a8a26a0460709529242",
    "pkgpath": "bin/libil2cpp.so",
-   "size": 93194648,
+   "size": 93194672,
    "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/Native/libil2cpp.so",
    "xfrm_flags": {
     "signed": {
@@ -29,9 +29,9 @@
      "version": 3
     }
    },
-   "xfrm_hash": "c20ad6fb396889517131927f8fe447ff1e8e127d",
+   "xfrm_hash": "bb56aef16d8eade8a8ed5a6e1c2154831ab8beb6",
    "xfrm_path": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/.out/.cache/release_lumin_clang-3.8_aarch64/com.ict.arofficedemo-5a94b53c77869a6a\\libil2cpp.so-c954817bcfb7012a",
-   "xfrm_size": 93195406
+   "xfrm_size": 93195430
   },
   {
    "compression": 8,
@@ -181,7 +181,7 @@
   },
   {
    "compression": 8,
-   "hash": "d131899895c45e89491c84cbfc829f34d9f93d24",
+   "hash": "efdd44b71e782a9fe50c0fca6889a6617a6c3603",
    "pkgpath": "Data/globalgamemanagers",
    "size": 36768,
    "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/globalgamemanagers"

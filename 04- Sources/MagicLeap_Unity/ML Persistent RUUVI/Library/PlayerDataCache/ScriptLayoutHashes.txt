@@ -2,7 +2,7 @@ Lumin
 PlayerPath?
 C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/05- Executables/Magic_Leap/App/AROfficeDemo.mpk
 SceneListBegin?
-Assets/MagicLeap/Examples/Scenes/Persistence.unity
+Assets/Scenes/MainScene.unity
 SceneListEnd?
 588c819a9e0309a4f768ae93ee4e7341 Assembly-CSharp.dll:MagicLeap.PersistenceExample
 fe902a933c0490bd346cdfe28ceb165e Assembly-CSharp.dll:UnityEngine.XR.MagicLeap.MagicLeapSceneOptimizer
@@ -212,7 +212,7 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:MagicLeap.ControllerFeedbackExample
-efba186ba21b4a0fc5f210df0bcd39dd Assembly-CSharp.dll:.Measurmentsupdatescrpt
+efba186ba21b4a0fc5f210df0bcd39dd Assembly-CSharp.dll:.ConNXTUpdate
 4811f0dfd53a3da0aad4f579f1922ee8 Assembly-CSharp.dll:MagicLeap.PlacementVisualizer
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 0ccd1f40c3aa78c3b00035f0d9decce4 Assembly-CSharp.dll:MagicLeap.MeshingExample
