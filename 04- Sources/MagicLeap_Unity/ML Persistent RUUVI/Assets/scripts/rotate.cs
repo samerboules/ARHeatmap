@@ -6,10 +6,10 @@ public class rotate : MonoBehaviour {
 
     private Camera _camera;
     private Camera _camera2;
-    private Canvas _canvas;
+    //private Canvas _canvas;
     // Use this for initialization
     void Start () {
-        _canvas = GetComponent<Canvas>();
+        //_canvas = GetComponent<Canvas>();
         _camera = Camera.main;
     }
 	

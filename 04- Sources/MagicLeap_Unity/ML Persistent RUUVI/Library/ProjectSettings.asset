@@ -579,7 +579,7 @@ PlayerSettings:
   incrementalIl2cppBuild: {}
   allowUnsafeCode: 0
   additionalIl2CppArgs: 
-  scriptingRuntimeVersion: 0
+  scriptingRuntimeVersion: 1
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
@@ -673,9 +673,13 @@ PlayerSettings:
   - PwFoundObjRead
   - ControllerPose
   - WorldReconstruction
+  - Internet
+  - LocalAreaNetwork
+  - BackgroundDownload
+  - BackgroundUpload
   luminMinimumPlatformAPILevel: 3
   facebookSdkVersion: 7.9.4
-  apiCompatibilityLevel: 2
+  apiCompatibilityLevel: 3
   cloudProjectId: cb8fac8d-d19d-4538-a0c7-32fe10c2fe61
   projectName: ML Persistent
   organizationId: samerboules
