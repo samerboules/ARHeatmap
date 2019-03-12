@@ -523,9 +523,6 @@
     <Reference Include="System.Linq.Queryable">
       <HintPath>C:/Program Files/Unity 2018.1.9f2-MLTP10/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Linq.Queryable.dll</HintPath>
     </Reference>
-    <Reference Include="System.Net.Http">
-      <HintPath>C:/Program Files/Unity 2018.1.9f2-MLTP10/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.Http.dll</HintPath>
-    </Reference>
     <Reference Include="System.Net.NameResolution">
       <HintPath>C:/Program Files/Unity 2018.1.9f2-MLTP10/Editor/Data/NetStandard/compat/2.0.0/shims/netstandard/System.Net.NameResolution.dll</HintPath>
     </Reference>

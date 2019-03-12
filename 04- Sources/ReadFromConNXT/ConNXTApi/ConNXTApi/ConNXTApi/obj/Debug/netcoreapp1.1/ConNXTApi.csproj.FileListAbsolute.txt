@@ -8,3 +8,4 @@ C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\ReadFromConNX
 C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\ReadFromConNXT\ConNXTApi\ConNXTApi\ConNXTApi\obj\Debug\netcoreapp1.1\ConNXTApi.AssemblyInfo.cs
 C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\ReadFromConNXT\ConNXTApi\ConNXTApi\ConNXTApi\obj\Debug\netcoreapp1.1\ConNXTApi.dll
 C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\ReadFromConNXT\ConNXTApi\ConNXTApi\ConNXTApi\obj\Debug\netcoreapp1.1\ConNXTApi.pdb
+C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\ReadFromConNXT\ConNXTApi\ConNXTApi\ConNXTApi\obj\Debug\netcoreapp1.1\ConNXTApi.csprojAssemblyReference.cache

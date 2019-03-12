@@ -350,6 +350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 224729582721497012}
   - component: {fileID: 114919947036570340}
+  - component: {fileID: 114308227481280712}
   m_Layer: 0
   m_Name: UpdateMeasurementFromConNXT
   m_TagString: Untagged
@@ -481,7 +482,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1939955073232520}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0.8, z: 1}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 4194211385358340}
@@ -1063,9 +1064,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'CoLab RUUVI Tag 001
-
-    (CLRT001)'
+  m_Text: CoLab RUUVI Tag ID
 --- !u!114 &114290170326872516
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1093,6 +1092,18 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &114308227481280712
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1755120366542314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c890bdf354698ba429472b626542bcc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _privileges: ab000000
 --- !u!114 &114356072162207222
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1125,7 +1136,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "1059.0 m/s\xB2"
+  m_Text: "00.0 m/s\xB2"
 --- !u!114 &114385437481259398
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1158,7 +1169,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 35 %
+  m_Text: 00 %
 --- !u!114 &114393063864398512
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1217,7 +1228,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 992.42 hPA
+  m_Text: 000.00 hPA
 --- !u!114 &114476089525564542
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1413,7 +1424,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "24.7 \xB0C"
+  m_Text: "00.0 \xB0C"
 --- !u!114 &114816078138075436
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1479,7 +1490,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "-40.0 m/s\xB2"
+  m_Text: "00.0 m/s\xB2"
 --- !u!114 &114829646112448646
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1539,7 +1550,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Last updated on 07-03-2019 11:09
+  m_Text: Last updated on 00/00/0000 00:00
 --- !u!114 &114919947036570340
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1591,7 +1602,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "10.0 m/s\xB2"
+  m_Text: "00.0 m/s\xB2"
 --- !u!120 &120921795259183214
 LineRenderer:
   m_ObjectHideFlags: 1
