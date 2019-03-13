@@ -2,23 +2,23 @@
  "entries": [
   {
    "compression": 8,
-   "hash": "707b95e992a96ed1bbbcd8ed844126717415e516",
+   "hash": "d34ad33a805b1f353e299d308c52f6c8c507e2ec",
    "pkgpath": "Data/095890d8c9bde1a45b549a17e6e6f961",
    "size": 5036,
    "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/095890d8c9bde1a45b549a17e6e6f961"
   },
   {
    "compression": 8,
-   "hash": "2f0b9807cd6106863517b2f687346f484219b8f7",
+   "hash": "a2442bcd77d22af5e782d11a3c3f58ba65d74276",
    "pkgpath": "Data/Managed/Metadata/global-metadata.dat",
-   "size": 6960668,
+   "size": 7247240,
    "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/Managed/Metadata/global-metadata.dat"
   },
   {
    "compression": 8,
-   "hash": "0ee4f070a0b55090eac37c21a6cd2fdf0be442ea",
+   "hash": "d5845b013b4d8792a4dbd6a0eea3de467f1156c4",
    "pkgpath": "bin/libil2cpp.so",
-   "size": 80790440,
+   "size": 84189120,
    "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/Native/libil2cpp.so",
    "xfrm_flags": {
     "signed": {
@@ -29,9 +29,9 @@
      "version": 3
     }
    },
-   "xfrm_hash": "8038b9205979d2d851410ea44c6b490842597f3c",
+   "xfrm_hash": "c28d3169fa3ef1982c49c2311b982a1afcae0735",
    "xfrm_path": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/.out/.cache/release_lumin_clang-3.8_aarch64/com.ict.aroffice-5a94b53c77869a6a\\libil2cpp.so-c954817bcfb7012a",
-   "xfrm_size": 80791198
+   "xfrm_size": 84189878
   },
   {
    "compression": 8,
@@ -160,6 +160,27 @@
   },
   {
    "compression": 8,
+   "hash": "d5942f9b52d759a24271a339569366e22829e384",
+   "pkgpath": "Data/StreamingAssets/BackgroundMusicExample/Tune1.mp3",
+   "size": 1360456,
+   "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/StreamingAssets/BackgroundMusicExample/Tune1.mp3"
+  },
+  {
+   "compression": 8,
+   "hash": "fbd7b8022198bb2c4e8f76132063cadc79972370",
+   "pkgpath": "Data/StreamingAssets/BackgroundMusicExample/Tune2.mp3",
+   "size": 1320750,
+   "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/StreamingAssets/BackgroundMusicExample/Tune2.mp3"
+  },
+  {
+   "compression": 8,
+   "hash": "021111e07c0bfa8b6418438b565802e461bed48d",
+   "pkgpath": "Data/StreamingAssets/BackgroundMusicExample/Tune3.ogg",
+   "size": 1758796,
+   "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/StreamingAssets/BackgroundMusicExample/Tune3.ogg"
+  },
+  {
+   "compression": 8,
    "hash": "9bbb5e3aae616602db933abd34140e11132fccea",
    "pkgpath": "Data/UnitySubsystems/Runtime/UnitySubsystemsManifest.json",
    "size": 438,
@@ -174,23 +195,30 @@
   },
   {
    "compression": 8,
-   "hash": "36ca9cbef058a3de00011c6dd8ccf7b1bf826b3c",
+   "hash": "6e75dc43845c6ed08d142c60877abcb98466eca5",
+   "pkgpath": "Data/cc6e276adac1ef34da0ac9dd1e61c608",
+   "size": 4264,
+   "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/cc6e276adac1ef34da0ac9dd1e61c608"
+  },
+  {
+   "compression": 8,
+   "hash": "38f2e68142d9754927c6e1bfe4f90498f987ddeb",
    "pkgpath": "Data/globalgamemanagers",
-   "size": 35808,
+   "size": 36344,
    "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/globalgamemanagers"
   },
   {
    "compression": 8,
-   "hash": "81922932bebcde280220fbad714cfd2812a865fa",
+   "hash": "b37ca4143bd4fb2c2e4ce9b1d6ec87c9dfdb5ae4",
    "pkgpath": "Data/globalgamemanagers.assets",
-   "size": 36592,
+   "size": 37888,
    "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/globalgamemanagers.assets"
   },
   {
    "compression": 8,
-   "hash": "19dd89b08a3fda1c5fae41671dcd343e8ef79652",
+   "hash": "7cf55c3950c4cfe930d94c9aa3d94b78c21ef42d",
    "pkgpath": "Data/level0",
-   "size": 41828,
+   "size": 27908,
    "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/level0"
   },
   {
@@ -202,16 +230,16 @@
   },
   {
    "compression": 8,
-   "hash": "ddcbd799028ac7967bf79313f7fded06d607b0d1",
+   "hash": "ed84b20c85e0d138b1a9c0b016efee804aa6cdf3",
    "pkgpath": "Data/sharedassets0.assets",
-   "size": 2648260,
+   "size": 2643448,
    "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/sharedassets0.assets"
   },
   {
    "compression": 8,
-   "hash": "aa79cd3f0b79c237dc0b685dd14d1e983afce1ff",
+   "hash": "171b088d0a78ac4bb6a0e95185343e7e71f57b0e",
    "pkgpath": "Data/sharedassets0.assets.resS",
-   "size": 7655052,
+   "size": 7649592,
    "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/sharedassets0.assets.resS"
   },
   {
@@ -254,9 +282,9 @@
   },
   {
    "compression": 8,
-   "hash": "35260544ee732a1aac3f2beaac9714926d7bdfd4",
+   "hash": "c3eac2dcd815abed59008b15a49d9df6127bcc07",
    "pkgpath": "manifest.xml",
-   "size": 889,
+   "size": 785,
    "src": "C:\\Users\\samer.boules\\Documents\\GitHub\\AR_Office_Demo2\\04- Sources\\MagicLeap_Unity\\ML Persistent RUUVI\\Temp\\StagingArea\\manifest.xml",
    "xfrm_flags": {
     "manifest": {
@@ -264,9 +292,9 @@
      "developer_id": "0c3f9cd7-9a26-48cb-a925-50cb25f261b0"
     }
    },
-   "xfrm_hash": "678f5bbf8d4e629126124893482aeca7e8cbdd45",
+   "xfrm_hash": "97b0381ec441fe060e854d1fecb96228e57dc679",
    "xfrm_path": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/.out/.cache/release_lumin_clang-3.8_aarch64/com.ict.aroffice-5a94b53c77869a6a\\manifest.xml-5138294cde6d7c2e",
-   "xfrm_size": 901
+   "xfrm_size": 797
   }
  ],
  "pkgflags": {

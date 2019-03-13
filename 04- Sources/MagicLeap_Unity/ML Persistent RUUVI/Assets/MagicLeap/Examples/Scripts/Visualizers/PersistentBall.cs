@@ -88,12 +88,19 @@ namespace MagicLeap
         {
             if (_controllerConnectionHandler != null
                 && _controllerConnectionHandler.IsControllerValid(controllerId)
-                && gesture.Type == MLInputControllerTouchpadGestureType.Tap)
+                && gesture.Type == MLInputControllerTouchpadGestureType.RadialScroll)
             {
                 if (OnContentDestroy != null)
                 {
                     OnContentDestroy(gameObject);
                 }
+            }
+            else if (_controllerConnectionHandler != null
+                && _controllerConnectionHandler.IsControllerValid(controllerId)
+                && gesture.Type == MLInputControllerTouchpadGestureType.Tap)
+            {
+                ConNXTUpdate _ConNXTUpdate = gameObject.GetComponent<ConNXTUpdate>();
+                _ConNXTUpdate.SetTextsToNextRuuvi();
             }
         }
         #endregion

@@ -4,28 +4,26 @@ using UnityEngine;
 using UnityEngine.UI;
 
 using System;
-using System.Net.Http;
-using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using Newtonsoft.Json.Linq;
-
+using DG.Tweening;
 
 public class ConNXTUpdate : MonoBehaviour {
-
-    //Declare text boxes that will be updated
-    public Text RUUVINameText = null;
-    public Text TemperatureText = null;
-    public Text HumidityText = null;
-    public Text PressureText = null;
-    public Text AccelXText = null;
-    public Text AccelYText = null;
-    public Text AccelZText = null;
-    public Text LastUpdatedText = null;
+    public RectTransform RuuviMenu;
+//Declare text boxes that will be updated
+    public Text RUUVINameText_001 = null;   
+    public Text TemperatureText_001 = null;    
+    public Text HumidityText_001 = null;
+    public Text PressureText_001 = null;
+    public Text AccelXText_001 = null;
+    public Text AccelYText_001 = null;
+    public Text AccelZText_001 = null;
+    public Text LastUpdatedText_001 = null;
 
     // Structure to hold the data for each RUUVI tag
-    struct RuuviTag
+    private struct RuuviTag
     {
         // Declaring different data types 
         public string _deviceID;
@@ -37,6 +35,8 @@ public class ConNXTUpdate : MonoBehaviour {
         public string _accelerationY;
         public string _accelerationZ;
     }
+
+    RuuviTag[] Ruuvis;
 
     private string TokenEndPoint = "https://beta.connxt.eu/connect/token";
     private string DevicesEndPoint = "https://beta.connxt.eu/api/Devices";
@@ -52,8 +52,29 @@ public class ConNXTUpdate : MonoBehaviour {
         public string TokenType { get; set; }
     }
 
+    private int currentRuuviDisplayed = 0;
     // Use this for initialization
     void Start () {
+        
+        /*
+        * 
+        * 
+        * 
+        * 
+        * 
+        * 
+        */
+        //RuuviMenu.gameObject.SetActive(false);
+        //RuuviMenu.DOAnchorPos(new Vector2(0.7f, 0.7f), 0f);
+        //RuuviMenu.gameObject.SetActive(true);
+        //RuuviMenu.DOAnchorPos(new Vector2(0f, 0.7f), 1.5f);
+        /* 
+        * 
+        * 
+        * 
+        * 
+        * 
+        */
         //call update measurements in a coroutine
         StartCoroutine(UpdateDataFromConNXT());
     }
@@ -108,7 +129,7 @@ public class ConNXTUpdate : MonoBehaviour {
             JArray devices = JArray.Parse(DevicesRequest.text);
 
             //Create array of RuuviTag structs by the number of devices found
-            RuuviTag[] Ruuvis = new RuuviTag[devices.Count];
+            Ruuvis = new RuuviTag[devices.Count];
 
             //Step 3: Loop over all devices and read the telemetry data (GET request
             int localindex = 0;
@@ -139,8 +160,6 @@ public class ConNXTUpdate : MonoBehaviour {
 
                     foreach (JObject dataPoint in telemetry["dataPoints"] as JArray)
                     {
-                        //Console.WriteLine($"{dataPoint["key"],-15} = {dataPoint["value"]}");
-
                         //Fill the structure with the updated data
                         if (dataPoint["key"].ToString() == "AccelerationX")
                         {
@@ -166,22 +185,30 @@ public class ConNXTUpdate : MonoBehaviour {
                         {
                             Ruuvis[localindex]._humidity = dataPoint["value"].ToString();
                         }
-
                     }
                 }
                 localindex++;
             }
-
-            //Update the text fields on the gui
-            RUUVINameText.text = "CoLab RUUVI Tag ID " + Ruuvis[1]._deviceID;
-            TemperatureText.text = Ruuvis[1]._temperature + " °C";
-            HumidityText.text = Ruuvis[1]._humidity + " %";
-            PressureText.text = Ruuvis[1]._pressure + " hPa";
-            AccelXText.text = Ruuvis[1]._accelerationX;
-            AccelYText.text = Ruuvis[1]._accelerationY;
-            AccelZText.text = Ruuvis[1]._accelerationZ;
-            LastUpdatedText.text = "Last updated on " + Ruuvis[1]._timeStamp;
         }
     }
 
+    //1-4
+    private void SetTextsToRuuviID(int RuuviID)
+    {
+        //Update the text fields on the gui
+        RUUVINameText_001.text = "CoLab RUUVI Tag ID " + Ruuvis[RuuviID]._deviceID;
+        TemperatureText_001.text = Ruuvis[RuuviID]._temperature + " °C";
+        HumidityText_001.text = Ruuvis[RuuviID]._humidity + " %";
+        PressureText_001.text = Ruuvis[RuuviID]._pressure + " hPa";
+        AccelXText_001.text = Ruuvis[RuuviID]._accelerationX;
+        AccelYText_001.text = Ruuvis[RuuviID]._accelerationY;
+        AccelZText_001.text = Ruuvis[RuuviID]._accelerationZ;
+        LastUpdatedText_001.text = "Last updated on " + Ruuvis[RuuviID]._timeStamp;
+    }
+
+    public void SetTextsToNextRuuvi()
+    {
+        currentRuuviDisplayed++;
+        SetTextsToRuuviID((currentRuuviDisplayed)%4);
+    }
 }

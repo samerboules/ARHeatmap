@@ -1,4 +1,4 @@
-<manifest xmlns:ml="magicleap" ml:developer_id="0c3f9cd7-9a26-48cb-a925-50cb25f261b0" ml:package="com.ict.aroffice" ml:version_code="3" ml:version_name="connxt">
+<manifest xmlns:ml="magicleap" ml:developer_id="0c3f9cd7-9a26-48cb-a925-50cb25f261b0" ml:package="com.ict.aroffice" ml:version_code="4" ml:version_name="connxt">
   <application ml:min_api_level="3" ml:sdk_version="1.0" ml:visible_name="ICTAROffice">
     <uses-privilege ml:name="LowLatencyLightwear" />
     <uses-privilege ml:name="ControllerPose" />
@@ -6,8 +6,6 @@
     <uses-privilege ml:name="LocalAreaNetwork" />
     <uses-privilege ml:name="PwFoundObjRead" />
     <uses-privilege ml:name="WorldReconstruction" />
-    <uses-privilege ml:name="BackgroundDownload" />
-    <uses-privilege ml:name="BackgroundUpload" />
     <component ml:binary_name="bin/Player.elf" ml:name=".fullscreen" ml:type="Fullscreen" ml:visible_name="ICTAROffice">
       <icon ml:model_folder="Icon/Model" ml:portal_folder="Icon/Portal" />
     </component>

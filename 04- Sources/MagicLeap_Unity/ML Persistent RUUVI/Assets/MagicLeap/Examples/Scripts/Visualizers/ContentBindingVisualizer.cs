@@ -25,6 +25,8 @@ namespace MagicLeap
     [RequireComponent(typeof(MLPersistentBehavior), typeof(Collider))]
     public class ContentBindingVisualizer : MonoBehaviour
     {
+
+
         #region Private Variables
         MLPersistentBehavior _persistentBehavior;
 
@@ -60,6 +62,8 @@ namespace MagicLeap
         /// </summary>
         void Awake()
         {
+
+
             _persistentBehavior = GetComponent<MLPersistentBehavior>();
             _persistentBehavior.OnStatusUpdate += HandleStatusUpdate;
 
@@ -155,14 +159,12 @@ namespace MagicLeap
         private void Highlight()
         {
             _highlightEffect.SetActive(true);
-
             if (_persistentBehavior != null && _persistentBehavior.Binding.PCF.CurrentResult == MLResultCode.Ok)
             {
                 _lineToPCF.SetPosition(0, transform.position);
                 _lineToPCF.SetPosition(1, _persistentBehavior.Binding.PCF.Position);
                 _lineToPCF.enabled = PCFVisualizer.IsDebugMode;
             }
-
             if (OnHighlight != null)
             {
                 OnHighlight();

@@ -177,10 +177,6 @@ namespace MagicLeap
             else if (button == MLInputControllerButton.HomeTap)
             {
                 _pcfVisualizer.ToggleDebug();
-                /*
-                 * TODO: Toggle Mesh Visibility
-                 *
-                 */
             }
         }
 
