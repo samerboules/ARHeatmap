@@ -59,6 +59,7 @@ public class InternetChecker : MonoBehaviour
     {
         //Debug.Log("No Internet");
         DebuggingInfoText.text = "No Internet";
+
         internetConnectBool = false;
     }
 

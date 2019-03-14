@@ -10,9 +10,14 @@
 // ---------------------------------------------------------------------
 // %BANNER_END%
 
+using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
 using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using UnityEngine;
+using UnityEngine.Networking;
 using UnityEngine.UI;
 using UnityEngine.XR.MagicLeap;
 
@@ -27,6 +32,8 @@ namespace MagicLeap
     public class PersistenceExample : MonoBehaviour
     {
         #region Private Variables
+        public Text DebuggingInfoText = null;
+
         [SerializeField, Tooltip("Content to create")]
         GameObject _content;
         List<MLPersistentBehavior> _pointBehaviors = new List<MLPersistentBehavior>();
@@ -180,6 +187,71 @@ namespace MagicLeap
             }
         }
 
+
+        private string tokenEndPoint = "https://beta.connxt.eu/connect/token";
+        //ConNXT credential
+        private string clientID = "52840b9f-23db-475d-a920-272217be4402";
+        private string clientSecret = "ZTXMI5Em/676HmLL0WUQUQ==";
+        //This class is used to break down the Json of Token
+        private class TokenResponse
+        {
+            public string access_token { get; set; }
+            public int expires_in { get; set; }
+            public string token_type { get; set; }
+        }
+        //Token that will be recieved from ConNXT
+        private string token;
+        IEnumerator GetRequest(string uri)
+        {
+            using (UnityWebRequest webRequest = UnityWebRequest.Get(uri))
+            {
+                // Request and wait for the desired page.
+                yield return webRequest.SendWebRequest();
+
+                string[] pages = uri.Split('/');
+                int page = pages.Length - 1;
+
+                if (webRequest.isNetworkError)
+                {
+                    DebuggingInfoText.text =  "Error: " + webRequest.error;
+                }
+                else
+                {
+                    DebuggingInfoText.text = "Connected";
+                
+                    //Step 1: Get access token from ConNXT (POST request)
+                    //Create new www form
+                    WWWForm POSTForm = new WWWForm();
+
+                    //Add Fields for POST Request
+                    POSTForm.AddField("grant_type", "client_credentials");
+                    POSTForm.AddField("client_id", clientID);
+                    POSTForm.AddField("client_secret", clientSecret);
+                    POSTForm.AddField("scope", "devices:telemetry devices:get");
+
+                    using (UnityWebRequest www = UnityWebRequest.Post(tokenEndPoint, POSTForm))
+                    {
+                        yield return www.SendWebRequest();
+
+                        if (www.isNetworkError || www.isHttpError)
+                        {
+                            DebuggingInfoText.text = www.error;
+                        }
+                        else
+                        {
+                            DebuggingInfoText.text = "Token Request complete!";
+                            //DebuggingInfoText.text = www.downloadHandler.text;
+                            //Deserialize the JSON return to extract the token
+                            TokenResponse result = JsonConvert.DeserializeObject<TokenResponse>(www.downloadHandler.text);
+                            token = result.access_token;
+                            DebuggingInfoText.text = result.access_token;
+                        }
+                    }
+                }
+            }
+        }
+
+
         /// <summary>
         /// Responds to privilege requester result.
         /// </summary>
@@ -200,6 +272,14 @@ namespace MagicLeap
                 return;
             }
             _statusText.text = "Status: Starting up Systems";
+
+
+            // A correct website page.
+            StartCoroutine(GetRequest("https://beta.connxt.eu"));
+
+            // A non-existing page.
+            //StartCoroutine(GetRequest("https://error.html"));
+
 
             result = MLPersistentStore.Start();
             if (!result.IsOk)

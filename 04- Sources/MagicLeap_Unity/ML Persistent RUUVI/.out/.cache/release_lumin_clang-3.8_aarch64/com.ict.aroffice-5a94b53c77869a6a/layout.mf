@@ -8,6 +8,10 @@
   "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/Plugins/AudioPluginMSASpatializer.so"
  },
  {
+  "dest": "bin/Newtonsoft.Json.dll",
+  "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/Plugins/Newtonsoft.Json.dll"
+ },
+ {
   "dest": "bin/UnityEngine.SpatialTracking.dll",
   "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/Plugins/UnityEngine.SpatialTracking.dll"
  },

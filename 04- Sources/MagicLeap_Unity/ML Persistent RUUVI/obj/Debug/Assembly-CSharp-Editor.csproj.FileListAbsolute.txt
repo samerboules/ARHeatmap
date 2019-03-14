@@ -417,3 +417,8 @@ C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\MagicLeap_Uni
 C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\MagicLeap_Unity\ML Persistent RUUVI\obj\Debug\Assembly-CSharp-Editor.csproj.CopyComplete
 C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\MagicLeap_Unity\ML Persistent RUUVI\obj\Debug\Assembly-CSharp-Editor.dll
 C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\MagicLeap_Unity\ML Persistent RUUVI\obj\Debug\Assembly-CSharp-Editor.pdb
+C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\MagicLeap_Unity\ML Persistent RUUVI\Temp\bin\Debug\DOTween.dll
+C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\MagicLeap_Unity\ML Persistent RUUVI\Temp\bin\Debug\DOTweenEditor.dll
+C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\MagicLeap_Unity\ML Persistent RUUVI\Temp\bin\Debug\DOTween.xml
+C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\MagicLeap_Unity\ML Persistent RUUVI\Temp\bin\Debug\DOTweenEditor.xml
+C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\MagicLeap_Unity\ML Persistent RUUVI\Temp\bin\Debug\Newtonsoft.Json.xml
