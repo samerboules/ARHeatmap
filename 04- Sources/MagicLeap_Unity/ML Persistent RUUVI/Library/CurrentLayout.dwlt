@@ -109,7 +109,7 @@ MonoBehaviour:
   m_MinSize: {x: 583, y: 492}
   m_MaxSize: {x: 14004, y: 14042}
   vertical: 0
-  controlID: 120
+  controlID: 51
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -133,7 +133,7 @@ MonoBehaviour:
   m_MinSize: {x: 306, y: 492}
   m_MaxSize: {x: 10002, y: 14042}
   vertical: 1
-  controlID: 121
+  controlID: 65
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -157,7 +157,7 @@ MonoBehaviour:
   m_MinSize: {x: 306, y: 221}
   m_MaxSize: {x: 8006, y: 4021}
   vertical: 0
-  controlID: 122
+  controlID: 66
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -201,8 +201,8 @@ MonoBehaviour:
     y: 0
     width: 982
     height: 665
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 104, y: 121}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 14}
@@ -314,14 +314,14 @@ MonoBehaviour:
     height: 644
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 3300.0509743
+  lastFramingTime: 1686.8736545
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.0000065566273, y: 1.3320712, z: 1.0036309}
+    m_Target: {x: 0, y: 1.5276, z: 1}
     speed: 2
-    m_Value: {x: 0.0000065566273, y: 1.3320712, z: 1.0036309}
+    m_Value: {x: 0, y: 1.5276, z: 1}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -349,13 +349,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.013809298, y: -0.0009029107, z: 0.0000124619, w: -0.9999043}
+    m_Target: {x: 0.041672926, y: -0.015888508, z: -0.00066278817, w: -0.9990048}
     speed: 2
-    m_Value: {x: -0.013809298, y: -0.0009029107, z: 0.0000124619, w: -0.9999043}
+    m_Value: {x: 0.041672926, y: -0.015888508, z: -0.00066278817, w: -0.9990048}
   m_Size:
-    m_Target: 0.6215826
+    m_Target: 0.96625227
     speed: 2
-    m_Value: 0.6215826
+    m_Value: 0.96625227
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -471,7 +471,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: a855ffff2656ffffe457ffff306bffffba76ffff3877fffff678fffff87effff767fffff3481ffff7687fffff487ffffb289ffffe6c5ffffd4cdffff80ceffff3ed0ffff88d5ffff34d6fffff2d7fffff0fbffff00000000
+    m_ExpandedIDs: 96bafbff18bbfbffd6bcfbfff218fcffba1dfcff3c1efcfffa1ffcff2672fcffaa72fcff6874fcff9081fcffece3feff2ee4fefff0fbffff00000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: RUUVITag 1
@@ -482,7 +482,7 @@ MonoBehaviour:
         y: 0
         width: 0
         height: 0
-      m_UserData: -38082
+      m_UserData: -255744
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -557,11 +557,11 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Scenes
+    - Assets/Prefabs
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\MagicLeap_Unity\ML
     Persistent RUUVI
@@ -569,8 +569,8 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f0100000
-    m_LastClickedID: 4336
+    m_SelectedIDs: a80f0000
+    m_LastClickedID: 4008
     m_ExpandedIDs: 00000000440a0000920d00004812000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -599,7 +599,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000440a0000920d0000f811000048120000
+    m_ExpandedIDs: 00000000440a0000920d000048120000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

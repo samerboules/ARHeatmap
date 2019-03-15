@@ -27,12 +27,18 @@ public class ConNXTUpdate : MonoBehaviour {
     //That's only used in making animation of the menu
     public RectTransform RuuviMenu;
     //Declare UI text boxes that will be updated
-    public Text RUUVINameText       = null;   
-    public Text TemperatureText     = null;    
+    public Text RUUVINameText       = null;
+    public Text TemperatureTitleText = null;
+    public Text TemperatureText     = null;
+    public Text HumidityTitleText = null;
     public Text HumidityText        = null;
+    public Text PressureTitleText = null;
     public Text PressureText        = null;
+    public Text AccelXTitleText = null;
     public Text AccelXText          = null;
+    public Text AccelYTitleText = null;
     public Text AccelYText          = null;
+    public Text AccelZTitleText = null;
     public Text AccelZText          = null;
     public Text LastUpdatedText     = null;
     //public Text DebuggingInfoText   = null;
@@ -82,7 +88,7 @@ public class ConNXTUpdate : MonoBehaviour {
     }
 
     //Which Ruuvi you want to display on UI
-    private int currentRuuviDisplayed = 1;
+    private int currentRuuviDisplayed;
 
     PrivilegeRequester __privilegeRequester;
     bool firstLoopUpdate = true;
@@ -141,20 +147,6 @@ public class ConNXTUpdate : MonoBehaviour {
 
         TokenResponse result = JsonConvert.DeserializeObject<TokenResponse>(request.text);
         token = result.access_token;
-
-        //Deserialize the JSON return to extract the token
-        //var result = JsonConvert.DeserializeObject<TokenResponse>(
-        //    request.text,
-        //    new JsonSerializerSettings
-        //    {
-        //        ContractResolver = new DefaultContractResolver
-        //        {
-        //            NamingStrategy = new SnakeCaseNamingStrategy()
-        //        }
-        //    }
-        //);
-
-        //token = result.AccessToken;
 
         //Step 2: Get the number of devices on ConNXT (GET request)
         Dictionary<string, string> headers_ = POSTForm.headers;
@@ -238,22 +230,34 @@ public class ConNXTUpdate : MonoBehaviour {
         RUUVINameText.text = "CoLab RUUVI Tag 00" + RuuviID.ToString() + "\nDeviceID: " + Ruuvis[RuuviID]._deviceID;
         if (Ruuvis[RuuviID]._temperature == null)
         {
+            TemperatureTitleText.text = " ";
             TemperatureText.text = " ";
+            HumidityTitleText.text = " ";
             HumidityText.text = " ";
+            PressureTitleText.text = " ";
             PressureText.text = "";
+            AccelXTitleText.text = " ";
             AccelXText.text = "";
+            AccelYTitleText.text = " ";
             AccelYText.text = "";
+            AccelZTitleText.text = " ";
             AccelZText.text = ""; ;
             LastUpdatedText.text = "Loading...";
         }
         else
         {
             //Update the text fields on the gui
+            TemperatureTitleText.text = "Temperature";
             TemperatureText.text = Ruuvis[RuuviID]._temperature + " °C";
+            HumidityTitleText.text = "Humidity";
             HumidityText.text = Ruuvis[RuuviID]._humidity + " %";
+            PressureTitleText.text = "Pressure";
             PressureText.text = Ruuvis[RuuviID]._pressure + " hPa";
+            AccelXTitleText.text = "Acceleration X";
             AccelXText.text = Ruuvis[RuuviID]._accelerationX + " m/s2";
+            AccelYTitleText.text = "Acceleration Y";
             AccelYText.text = Ruuvis[RuuviID]._accelerationY + " m/s2";
+            AccelZTitleText.text = "Acceleration Z";
             AccelZText.text = Ruuvis[RuuviID]._accelerationZ + " m/s2"; ;
             LastUpdatedText.text = "Last updated on " + Ruuvis[RuuviID]._timeStamp;
         }

@@ -147,7 +147,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.26, y: -0.06491001}
+  m_AnchoredPosition: {x: -0.26, y: -0.118}
   m_SizeDelta: {x: 300, y: 15.12122}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &47381776
@@ -401,6 +401,10 @@ Prefab:
       propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1463616170062846, guid: 6884f69ad0adbb441905ff499f5d1ece, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6884f69ad0adbb441905ff499f5d1ece, type: 2}
   m_IsPrefabParent: 0
@@ -568,6 +572,10 @@ Prefab:
       propertyPath: m_Name
       value: Origin
       objectReference: {fileID: 0}
+    - target: {fileID: 100016, guid: 19e8f0334d30adc46be9a93a73b14e80, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 19e8f0334d30adc46be9a93a73b14e80, type: 3}
   m_IsPrefabParent: 0
@@ -728,7 +736,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.26, y: -0.013}
+  m_AnchoredPosition: {x: -0.26, y: -0.06608999}
   m_SizeDelta: {x: 300, y: 17.85188}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1096231914
@@ -806,7 +814,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.26, y: -0.040710002}
+  m_AnchoredPosition: {x: -0.26, y: -0.09379999}
   m_SizeDelta: {x: 300, y: 17.85188}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1373075700
@@ -1004,8 +1012,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -0.26, y: 0.11675}
-  m_SizeDelta: {x: 300, y: 155.66}
+  m_AnchoredPosition: {x: -0.137, y: 0.1}
+  m_SizeDelta: {x: 465.66, y: 193.29}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1467197544
 MonoBehaviour:
@@ -1039,11 +1047,25 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Press Bumper to place a new RUUVI sensor\nMove controller to content to
-    highlight it\nTap touchpad to remove highlighted sensor\nPull trigger to drag
-    highlighted sensor\nTap home button to enable/disable debug mode\n  Debug Mode
-    shows additional PCF Information\n\nUninstall app to wipe data\nSensor position
-    persists between app/device reboots"
+  m_Text: 'Press Bumper to place a new RUUVI sensor
+
+    Move controller to sensor to highlight it
+
+    Tap touchpad to display next sensor data on the highlighted sensor
+
+    Do a radial scroll on touchpad to remove highlighted sensor
+
+    Pull trigger to drag highlighted sensor
+
+
+    Tap home button to enable/disable debug mode
+
+    Debug Mode shows additional PCF Information and coloured Meshing for occlusion
+
+
+    Uninstall app to wipe data
+
+    Sensor position persists between app/device reboots'
 --- !u!222 &1467197545
 CanvasRenderer:
   m_ObjectHideFlags: 0

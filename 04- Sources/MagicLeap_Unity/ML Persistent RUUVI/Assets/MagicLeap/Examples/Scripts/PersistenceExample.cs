@@ -217,7 +217,7 @@ namespace MagicLeap
                 }
                 else
                 {
-                    DebuggingInfoText.text = "Connected";
+                    DebuggingInfoText.text = "Connected to the Internet. Testing CONNXT connection...";
                 
                     //Step 1: Get access token from ConNXT (POST request)
                     //Create new www form
@@ -239,7 +239,7 @@ namespace MagicLeap
                         }
                         else
                         {
-                            DebuggingInfoText.text = "Token Request complete!";
+                            DebuggingInfoText.text = "CONNXT connection test success, you can create RUUVIs now!";
                             //DebuggingInfoText.text = www.downloadHandler.text;
                             //Deserialize the JSON return to extract the token
                             //TokenResponse result = JsonConvert.DeserializeObject<TokenResponse>(www.downloadHandler.text);
