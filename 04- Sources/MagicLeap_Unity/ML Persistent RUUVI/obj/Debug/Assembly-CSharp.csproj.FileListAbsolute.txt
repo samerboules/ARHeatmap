@@ -457,3 +457,10 @@ C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\MagicLeap_Uni
 C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\MagicLeap_Unity\ML Persistent RUUVI\Temp\bin\Debug\System.Xml.Serialization.dll
 C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\MagicLeap_Unity\ML Persistent RUUVI\Temp\bin\Debug\DOTween.xml
 C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\MagicLeap_Unity\ML Persistent RUUVI\Temp\bin\Debug\Newtonsoft.Json.xml
+C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\MagicLeap_Unity\ML Persistent RUUVI\Temp\bin\Debug\UnityScript.dll
+C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\MagicLeap_Unity\ML Persistent RUUVI\Temp\bin\Debug\Boo.Lang.Parser.dll
+C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\MagicLeap_Unity\ML Persistent RUUVI\Temp\bin\Debug\Boo.Lang.Compiler.dll
+C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\MagicLeap_Unity\ML Persistent RUUVI\Temp\bin\Debug\Boo.Lang.dll
+C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\MagicLeap_Unity\ML Persistent RUUVI\Temp\bin\Debug\UnityScript.Lang.dll
+C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\MagicLeap_Unity\ML Persistent RUUVI\Temp\bin\Debug\Boo.Lang.PatternMatching.dll
+C:\Users\samer.boules\Documents\GitHub\AR_Office_Demo2\04- Sources\MagicLeap_Unity\ML Persistent RUUVI\Temp\bin\Debug\Boo.Lang.Useful.dll

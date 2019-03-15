@@ -12,30 +12,30 @@
 
 ----- il2cpp Statistics -----
 General:
-	Conversion Time: 24.853 s
+	Conversion Time: 29.889 s
 	Files Written: 186
-	String Literals: 6892
+	String Literals: 6895
 Methods:
-	Total Methods: 42386
-	Non-Generic Methods: 26228
+	Total Methods: 42377
+	Non-Generic Methods: 26219
 	Generic Type Methods: 13496
 	Generic Methods: 2662
 	Shared Methods: 16130
 	Methods with Tail Calls : 0
 Metadata:
-	Total: 5,461.9 kb
-	String Literals: 53.8 kb
+	Total: 5,460.5 kb
+	String Literals: 53.9 kb
 	String Literal Data: 205.0 kb
-	Metadata Strings: 528.1 kb
+	Metadata Strings: 528.0 kb
 	Events: 1.9 kb
-	Properties: 124.4 kb
-	Methods: 1,570.0 kb
+	Properties: 124.3 kb
+	Methods: 1,569.5 kb
 	Parameter Default Values: 3.4 kb
 	Field Default Values: 73.4 kb
 	Field and Parameter Default Values Data: 122.2 kb
 	Field Marshaled Sizes: 16.9 kb
-	Parameters: 500.5 kb
-	Fields: 281.8 kb
+	Parameters: 500.4 kb
+	Fields: 281.7 kb
 	Generic Parameters: 10.4 kb
 	Generic Parameter Constraints: 0.6 kb
 	Generic Containers: 7.8 kb
@@ -43,22 +43,22 @@ Metadata:
 	Interfaces: 5.8 kb
 	VTables: 188.5 kb
 	Interface Offsets: 34.5 kb
-	Type Definitions: 459.7 kb
+	Type Definitions: 459.6 kb
 	RGCTX Entries: 12.2 kb
 	Images: 1.6 kb
 	Assemblies: 3.4 kb
-	Metadata Usage Lists: 333.4 kb
-	Metadata Usage Pairs: 797.5 kb
+	Metadata Usage Lists: 333.3 kb
+	Metadata Usage Pairs: 797.3 kb
 	Field Refs: 1.7 kb
 	Referenced Assemblies: 0.9 kb
-	Attribute Types Ranges: 56.8 kb
+	Attribute Types Ranges: 56.7 kb
 	Attribute Types: 41.1 kb
 	Unresolved Virtual Call Parameter Types: 8.1 kb
 	Unresolved Virtual Call Parameter Ranges: 5.1 kb
 	Windows Runtime type names: 0.0 kb
 	Exported Types: 7.0 kb
 Codegen:
-	NullChecks : 77665
+	NullChecks : 77687
 Hashing:
 	String Literal Hash Collisions : 0
 	Type Hash Collisions : 353
@@ -75,77 +75,77 @@ Interop:
 	COM callable wrapper methods that were forwarded to call base class method : 0
 Compilation:
 	Total Files: 607
-	Files Compiled: 3
-	Cache Hits: 604
+	Files Compiled: 5
+	Cache Hits: 602
 	Cache Hit %: 99
 
 
 ----Assembly Conversion Times----
-	Convert Assembly-CSharp (617.3232421875ms)
-	Convert DOTween (468.431915283203ms)
-	Convert LuminUnity (549.241821289063ms)
-	Convert Mono.Security (322.348114013672ms)
-	Convert mscorlib (3448.181640625ms)
-	Convert netstandard (1.255499958992ms)
-	Convert Newtonsoft.Json (827.289306640625ms)
-	Convert System (1356.05419921875ms)
-	Convert System.Core (26.2248001098633ms)
-	Convert System.Diagnostics.StackTrace (1.45120000839233ms)
-	Convert System.Globalization.Extensions (1.30359995365143ms)
-	Convert System.IO.Compression (1.20190000534058ms)
-	Convert System.Runtime.Serialization (3.48049998283386ms)
-	Convert System.Runtime.Serialization.Primitives (1.18099999427795ms)
-	Convert System.Security.Cryptography.Algorithms (1.14699995517731ms)
-	Convert System.Security.SecureString (1.22210001945496ms)
-	Convert System.Xml (1035.13916015625ms)
-	Convert System.Xml.Linq (61.0934982299805ms)
-	Convert Unity.XR.MagicLeap (65.1503982543945ms)
-	Convert UnityEngine (1.27320003509521ms)
-	Convert UnityEngine.AIModule (3.50880002975464ms)
-	Convert UnityEngine.Analytics (41.7820014953613ms)
-	Convert UnityEngine.AnimationModule (16.7332000732422ms)
-	Convert UnityEngine.ARModule (6.04320001602173ms)
-	Convert UnityEngine.AssetBundleModule (5.20970010757446ms)
-	Convert UnityEngine.AudioModule (30.3929977416992ms)
-	Convert UnityEngine.CoreModule (288.916717529297ms)
-	Convert UnityEngine.DirectorModule (2.55710005760193ms)
-	Convert UnityEngine.GridModule (1.49140000343323ms)
-	Convert UnityEngine.ImageConversionModule (4.01900005340576ms)
-	Convert UnityEngine.IMGUIModule (57.21240234375ms)
-	Convert UnityEngine.InputModule (5.84289979934692ms)
-	Convert UnityEngine.JSONSerializeModule (2.36809992790222ms)
-	Convert UnityEngine.Physics2DModule (21.1492004394531ms)
-	Convert UnityEngine.PhysicsModule (15.3812990188599ms)
-	Convert UnityEngine.SharedInternalsModule (16.3516006469727ms)
-	Convert UnityEngine.SpatialTracking (16.8219013214111ms)
-	Convert UnityEngine.StandardEvents (10.9608001708984ms)
-	Convert UnityEngine.TerrainModule (2.42170000076294ms)
-	Convert UnityEngine.TextRenderingModule (15.5012989044189ms)
-	Convert UnityEngine.TilemapModule (7.06290006637573ms)
-	Convert UnityEngine.UI (958.357116699219ms)
-	Convert UnityEngine.UIElementsModule (4.46070003509521ms)
-	Convert UnityEngine.UIModule (19.0075016021729ms)
-	Convert UnityEngine.UnityAnalyticsModule (9.85599994659424ms)
-	Convert UnityEngine.UnityConnectModule (7.74569988250732ms)
-	Convert UnityEngine.UnityWebRequestModule (38.2528991699219ms)
-	Convert UnityEngine.UnityWebRequestWWWModule (5.32520008087158ms)
-	Convert UnityEngine.VideoModule (11.4612998962402ms)
-	Convert UnityEngine.VRModule (6.34779977798462ms)
-	Convert UnityEngine.XRModule (24.7495002746582ms)
+	Convert Assembly-CSharp (694.376892089844ms)
+	Convert DOTween (524.864379882813ms)
+	Convert LuminUnity (599.407897949219ms)
+	Convert Mono.Security (394.4423828125ms)
+	Convert mscorlib (4463.37451171875ms)
+	Convert netstandard (1.98389995098114ms)
+	Convert Newtonsoft.Json (985.666381835938ms)
+	Convert System (1596.57116699219ms)
+	Convert System.Core (34.2358016967773ms)
+	Convert System.Diagnostics.StackTrace (3.50419998168945ms)
+	Convert System.Globalization.Extensions (1.69179999828339ms)
+	Convert System.IO.Compression (1.34089994430542ms)
+	Convert System.Runtime.Serialization (2.38700008392334ms)
+	Convert System.Runtime.Serialization.Primitives (1.51269996166229ms)
+	Convert System.Security.Cryptography.Algorithms (1.84070003032684ms)
+	Convert System.Security.SecureString (1.32539999485016ms)
+	Convert System.Xml (1176.23095703125ms)
+	Convert System.Xml.Linq (112.60230255127ms)
+	Convert Unity.XR.MagicLeap (54.4854965209961ms)
+	Convert UnityEngine (1.51300001144409ms)
+	Convert UnityEngine.AIModule (3.50399994850159ms)
+	Convert UnityEngine.Analytics (46.49169921875ms)
+	Convert UnityEngine.AnimationModule (22.0825996398926ms)
+	Convert UnityEngine.ARModule (4.50909996032715ms)
+	Convert UnityEngine.AssetBundleModule (5.13089990615845ms)
+	Convert UnityEngine.AudioModule (37.6360015869141ms)
+	Convert UnityEngine.CoreModule (340.462890625ms)
+	Convert UnityEngine.DirectorModule (3.12700009346008ms)
+	Convert UnityEngine.GridModule (1.50160002708435ms)
+	Convert UnityEngine.ImageConversionModule (3.67339992523193ms)
+	Convert UnityEngine.IMGUIModule (69.038200378418ms)
+	Convert UnityEngine.InputModule (7.45599985122681ms)
+	Convert UnityEngine.JSONSerializeModule (2.8921000957489ms)
+	Convert UnityEngine.Physics2DModule (17.7680988311768ms)
+	Convert UnityEngine.PhysicsModule (16.0431995391846ms)
+	Convert UnityEngine.SharedInternalsModule (18.182300567627ms)
+	Convert UnityEngine.SpatialTracking (22.9102001190186ms)
+	Convert UnityEngine.StandardEvents (7.53060007095337ms)
+	Convert UnityEngine.TerrainModule (2.91980004310608ms)
+	Convert UnityEngine.TextRenderingModule (19.6059017181396ms)
+	Convert UnityEngine.TilemapModule (10.9003000259399ms)
+	Convert UnityEngine.UI (1144.45776367188ms)
+	Convert UnityEngine.UIElementsModule (4.80459976196289ms)
+	Convert UnityEngine.UIModule (22.2612991333008ms)
+	Convert UnityEngine.UnityAnalyticsModule (12.2940998077393ms)
+	Convert UnityEngine.UnityConnectModule (7.93020009994507ms)
+	Convert UnityEngine.UnityWebRequestModule (53.1423988342285ms)
+	Convert UnityEngine.UnityWebRequestWWWModule (5.16130018234253ms)
+	Convert UnityEngine.VideoModule (14.2180004119873ms)
+	Convert UnityEngine.VRModule (9.43089962005615ms)
+	Convert UnityEngine.XRModule (28.4825992584229ms)
 
 ----Misc Timing----
-	PreProcessStage: 574.091796875
+	PreProcessStage: 633.297424316406
 	GenericsCollector.Collect: None
-	WriteGenerics: 5921.337890625
-	AllAssemblyConversion: 10448.345703125
+	WriteGenerics: 7015.27490234375
+	AllAssemblyConversion: 12620.798828125
 
 ----Generated Files----
-Bulk_Assembly-CSharp_0.cpp	2304390
-Bulk_Assembly-CSharp_1.cpp	2018197
+Bulk_Assembly-CSharp_0.cpp	2342825
+Bulk_Assembly-CSharp_1.cpp	2012270
 Bulk_DOTween_0.cpp	1857087
 Bulk_DOTween_1.cpp	1610619
-Bulk_Generics_0.cpp	1573509
-Bulk_Generics_1.cpp	1610072
+Bulk_Generics_0.cpp	1574343
+Bulk_Generics_1.cpp	1610373
 Bulk_Generics_10.cpp	1486173
 Bulk_Generics_11.cpp	1453596
 Bulk_Generics_12.cpp	1473159
@@ -161,7 +161,7 @@ Bulk_Generics_20.cpp	1470974
 Bulk_Generics_21.cpp	1661430
 Bulk_Generics_22.cpp	1622030
 Bulk_Generics_23.cpp	1314628
-Bulk_Generics_3.cpp	2027107
+Bulk_Generics_3.cpp	2027577
 Bulk_Generics_4.cpp	1843650
 Bulk_Generics_5.cpp	1307432
 Bulk_Generics_6.cpp	1354235
@@ -194,10 +194,10 @@ Bulk_mscorlib_7.cpp	2183237
 Bulk_mscorlib_8.cpp	1757561
 Bulk_mscorlib_9.cpp	2255497
 Bulk_netstandard_0.cpp	1622
-Bulk_Newtonsoft.Json_0.cpp	2213445
-Bulk_Newtonsoft.Json_1.cpp	1881961
-Bulk_Newtonsoft.Json_2.cpp	2067291
-Bulk_Newtonsoft.Json_3.cpp	2051399
+Bulk_Newtonsoft.Json_0.cpp	2215026
+Bulk_Newtonsoft.Json_1.cpp	1883452
+Bulk_Newtonsoft.Json_2.cpp	2068872
+Bulk_Newtonsoft.Json_3.cpp	2052233
 Bulk_Newtonsoft.Json_4.cpp	36193
 Bulk_System.Core_0.cpp	404414
 Bulk_System.Diagnostics.StackTrace_0.cpp	1622
@@ -228,8 +228,8 @@ Bulk_UnityEngine.AnimationModule_0.cpp	181005
 Bulk_UnityEngine.ARModule_0.cpp	60810
 Bulk_UnityEngine.AssetBundleModule_0.cpp	24300
 Bulk_UnityEngine.AudioModule_0.cpp	375272
-Bulk_UnityEngine.CoreModule_0.cpp	1849233
-Bulk_UnityEngine.CoreModule_1.cpp	1108367
+Bulk_UnityEngine.CoreModule_0.cpp	1842269
+Bulk_UnityEngine.CoreModule_1.cpp	1116370
 Bulk_UnityEngine.DirectorModule_0.cpp	21942
 Bulk_UnityEngine.GridModule_0.cpp	6783
 Bulk_UnityEngine.ImageConversionModule_0.cpp	13228
@@ -252,18 +252,18 @@ Bulk_UnityEngine.UIModule_0.cpp	211140
 Bulk_UnityEngine.UnityAnalyticsModule_0.cpp	117863
 Bulk_UnityEngine.UnityConnectModule_0.cpp	70024
 Bulk_UnityEngine.UnityWebRequestModule_0.cpp	425523
-Bulk_UnityEngine.UnityWebRequestWWWModule_0.cpp	69462
+Bulk_UnityEngine.UnityWebRequestWWWModule_0.cpp	67041
 Bulk_UnityEngine.VideoModule_0.cpp	144225
 Bulk_UnityEngine.VRModule_0.cpp	86175
 Bulk_UnityEngine.XRModule_0.cpp	272299
 Bulk_UnityEngine_0.cpp	1622
 GenericMethods0.cpp	1465723
-GenericMethods1.cpp	1793904
-GenericMethods2.cpp	2432420
-GenericMethods3.cpp	2109053
-GenericMethods4.cpp	1927192
-GenericMethods5.cpp	2015935
-Il2CppAttributes.cpp	4276806
+GenericMethods1.cpp	1794112
+GenericMethods2.cpp	2432695
+GenericMethods3.cpp	2109309
+GenericMethods4.cpp	1927384
+GenericMethods5.cpp	2016977
+Il2CppAttributes.cpp	4272819
 Il2CppCodeRegistration.cpp	1850
 Il2CppCompilerCalculateTypeValues_0Table.cpp	328233
 Il2CppCompilerCalculateTypeValues_10Table.cpp	414868
@@ -277,12 +277,12 @@ Il2CppCompilerCalculateTypeValues_17Table.cpp	237854
 Il2CppCompilerCalculateTypeValues_18Table.cpp	340401
 Il2CppCompilerCalculateTypeValues_19Table.cpp	340870
 Il2CppCompilerCalculateTypeValues_1Table.cpp	147112
-Il2CppCompilerCalculateTypeValues_20Table.cpp	317862
-Il2CppCompilerCalculateTypeValues_21Table.cpp	306390
-Il2CppCompilerCalculateTypeValues_22Table.cpp	415383
-Il2CppCompilerCalculateTypeValues_23Table.cpp	317330
-Il2CppCompilerCalculateTypeValues_24Table.cpp	315270
-Il2CppCompilerCalculateTypeValues_25Table.cpp	168505
+Il2CppCompilerCalculateTypeValues_20Table.cpp	375564
+Il2CppCompilerCalculateTypeValues_21Table.cpp	294473
+Il2CppCompilerCalculateTypeValues_22Table.cpp	264180
+Il2CppCompilerCalculateTypeValues_23Table.cpp	276100
+Il2CppCompilerCalculateTypeValues_24Table.cpp	341699
+Il2CppCompilerCalculateTypeValues_25Table.cpp	171713
 Il2CppCompilerCalculateTypeValues_26Table.cpp	158144
 Il2CppCompilerCalculateTypeValues_27Table.cpp	121550
 Il2CppCompilerCalculateTypeValues_28Table.cpp	114282
@@ -297,33 +297,33 @@ Il2CppCompilerCalculateTypeValues_35Table.cpp	609045
 Il2CppCompilerCalculateTypeValues_36Table.cpp	356038
 Il2CppCompilerCalculateTypeValues_37Table.cpp	248771
 Il2CppCompilerCalculateTypeValues_38Table.cpp	288872
-Il2CppCompilerCalculateTypeValues_39Table.cpp	370263
+Il2CppCompilerCalculateTypeValues_39Table.cpp	371900
 Il2CppCompilerCalculateTypeValues_3Table.cpp	317748
-Il2CppCompilerCalculateTypeValues_40Table.cpp	311274
+Il2CppCompilerCalculateTypeValues_40Table.cpp	312927
 Il2CppCompilerCalculateTypeValues_41Table.cpp	354737
 Il2CppCompilerCalculateTypeValues_42Table.cpp	324664
 Il2CppCompilerCalculateTypeValues_43Table.cpp	203506
-Il2CppCompilerCalculateTypeValues_44Table.cpp	459708
-Il2CppCompilerCalculateTypeValues_45Table.cpp	128077
+Il2CppCompilerCalculateTypeValues_44Table.cpp	475572
+Il2CppCompilerCalculateTypeValues_45Table.cpp	112220
 Il2CppCompilerCalculateTypeValues_4Table.cpp	231596
 Il2CppCompilerCalculateTypeValues_5Table.cpp	253366
 Il2CppCompilerCalculateTypeValues_6Table.cpp	442164
 Il2CppCompilerCalculateTypeValues_7Table.cpp	282258
 Il2CppCompilerCalculateTypeValues_8Table.cpp	230334
 Il2CppCompilerCalculateTypeValues_9Table.cpp	287859
-Il2CppCompilerCalculateTypeValuesTable.cpp	656817
-Il2CppGenericClassTable.cpp	1089570
+Il2CppCompilerCalculateTypeValuesTable.cpp	656648
+Il2CppGenericClassTable.cpp	1089568
 Il2CppGenericComDefinitions0.cpp	207
-Il2CppGenericInstDefinitions.cpp	688520
-Il2CppGenericMethodDefinitions.cpp	383551
+Il2CppGenericInstDefinitions.cpp	688894
+Il2CppGenericMethodDefinitions.cpp	383573
 Il2CppGenericMethodPointerTable.cpp	2812132
-Il2CppGenericMethodTable.cpp	2002005
-Il2CppInteropDataTable.cpp	173724
-Il2CppInvokerTable.cpp	4292561
+Il2CppGenericMethodTable.cpp	2002117
+Il2CppInteropDataTable.cpp	173740
+Il2CppInvokerTable.cpp	4293571
 Il2CppMetadataRegistration.cpp	1143
-Il2CppMetadataUsage.cpp	12056553
-Il2CppMethodPointerTable.cpp	2798558
+Il2CppMetadataUsage.cpp	12054681
+Il2CppMethodPointerTable.cpp	2797542
 Il2CppReversePInvokeWrapperTable.cpp	18844
-Il2CppTypeDefinitions.cpp	5392011
+Il2CppTypeDefinitions.cpp	5391603
 UnresolvedVirtualCallStubs.cpp	542819
 
