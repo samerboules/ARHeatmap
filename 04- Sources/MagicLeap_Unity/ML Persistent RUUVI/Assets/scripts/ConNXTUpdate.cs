@@ -76,18 +76,22 @@ public class ConNXTUpdate : MonoBehaviour {
     //This class is used to break down the Json of Token
     private class TokenResponse
     {
-        public string AccessToken { get; set; }
-        public int ExpiresIn { get; set; }
-        public string TokenType { get; set; }
+        public string access_token { get; set; }
+        public int expires_in { get; set; }
+        public string token_type { get; set; }
     }
 
     //Which Ruuvi you want to display on UI
-    private int currentRuuviDisplayed = 0;
+    private int currentRuuviDisplayed = 1;
 
     PrivilegeRequester __privilegeRequester;
     bool firstLoopUpdate = true;
     #endregion
 
+    private void Start()
+    {
+        InvokeRepeating("TriggerConNXTRepeating", 0f, 10f);
+    }
     #region Unity Functions
     //Unity method called automatically each frame
     void Awake () {
@@ -133,6 +137,10 @@ public class ConNXTUpdate : MonoBehaviour {
 
         //Wait until POST_Request retuns
         yield return request;
+
+
+        TokenResponse result = JsonConvert.DeserializeObject<TokenResponse>(request.text);
+        token = result.access_token;
 
         //Deserialize the JSON return to extract the token
         //var result = JsonConvert.DeserializeObject<TokenResponse>(
@@ -220,34 +228,56 @@ public class ConNXTUpdate : MonoBehaviour {
             }
             localindex++;
         }
-        if (firstLoopUpdate == true)
-        {
-            firstLoopUpdate = false;
-            SetTextsToRuuviID(1);
-        }
+        SetTextsToRuuviID(currentRuuviDisplayed);
     }
 
     //Private function that takes the number of Ruuvi you want to display and update the UI texts accordingly
     //RuuviID range: from 1 to 4 (Don't send in 0 because this is the Raspberry Pi gateway which has no telemetry
     private void SetTextsToRuuviID(int RuuviID)
     {
-        //Update the text fields on the gui
-        RUUVINameText.text      = "CoLab RUUVI Tag ID " + Ruuvis[RuuviID]._deviceID;
-        TemperatureText.text    = Ruuvis[RuuviID]._temperature + " °C";
-        HumidityText.text       = Ruuvis[RuuviID]._humidity + " %";
-        PressureText.text       = Ruuvis[RuuviID]._pressure + " hPa";
-        AccelXText.text         = Ruuvis[RuuviID]._accelerationX + " m/s2";
-        AccelYText.text         = Ruuvis[RuuviID]._accelerationY + " m/s2";
-        AccelZText.text         = Ruuvis[RuuviID]._accelerationZ + " m/s2"; ;
-        LastUpdatedText.text    = "Last updated on " + Ruuvis[RuuviID]._timeStamp;
+        RUUVINameText.text = "CoLab RUUVI Tag 00" + RuuviID.ToString() + "\nDeviceID: " + Ruuvis[RuuviID]._deviceID;
+        if (Ruuvis[RuuviID]._temperature == null)
+        {
+            TemperatureText.text = " ";
+            HumidityText.text = " ";
+            PressureText.text = "";
+            AccelXText.text = "";
+            AccelYText.text = "";
+            AccelZText.text = ""; ;
+            LastUpdatedText.text = "Loading...";
+        }
+        else
+        {
+            //Update the text fields on the gui
+            TemperatureText.text = Ruuvis[RuuviID]._temperature + " °C";
+            HumidityText.text = Ruuvis[RuuviID]._humidity + " %";
+            PressureText.text = Ruuvis[RuuviID]._pressure + " hPa";
+            AccelXText.text = Ruuvis[RuuviID]._accelerationX + " m/s2";
+            AccelYText.text = Ruuvis[RuuviID]._accelerationY + " m/s2";
+            AccelZText.text = Ruuvis[RuuviID]._accelerationZ + " m/s2"; ;
+            LastUpdatedText.text = "Last updated on " + Ruuvis[RuuviID]._timeStamp;
+        }
     }
 
     //Public function called from other modules to display the next Ruuvi data on UI
     //Designed to be called on certain controller button or action (example: tab the touchpad)
+    //First tap:    currentRuuviDisplayed =2    Menu=2
+    //Second tap:   currentRuuviDisplayed =3    Menu=3
+    //Third tap:    currentRuuviDisplayed =4    Menu=4
+    //Fourth tap:   currentRuuviDisplayed =1    Menu=1
+    //Fifth tap:    currentRuuviDisplayed =2    Menu=2
     public void SetTextsToNextRuuvi()
     {
-        currentRuuviDisplayed++;
-        SetTextsToRuuviID((currentRuuviDisplayed)%4);
+        if(currentRuuviDisplayed > 4)
+        {
+            currentRuuviDisplayed = 1;
+            SetTextsToRuuviID(currentRuuviDisplayed);
+        }
+        else
+        {
+            currentRuuviDisplayed = currentRuuviDisplayed + 1;
+            SetTextsToRuuviID(currentRuuviDisplayed);
+        }
     }
 
     void HandlePrivilegesDone_(MLResult result)
@@ -258,9 +288,6 @@ public class ConNXTUpdate : MonoBehaviour {
             enabled = false;
             return;
         }
-
-
-        InvokeRepeating("TriggerConNXTRepeating", 0f,10f);
     }
 
     void TriggerConNXTRepeating()

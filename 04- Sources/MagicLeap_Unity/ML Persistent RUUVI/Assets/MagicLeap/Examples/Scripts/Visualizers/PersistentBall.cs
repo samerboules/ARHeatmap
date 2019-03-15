@@ -99,6 +99,8 @@ namespace MagicLeap
                 && _controllerConnectionHandler.IsControllerValid(controllerId)
                 && gesture.Type == MLInputControllerTouchpadGestureType.Tap)
             {
+
+                //If highlighted and touchpad tap, switch to next RUUVI data
                 ConNXTUpdate _ConNXTUpdate = gameObject.GetComponent<ConNXTUpdate>();
                 _ConNXTUpdate.SetTextsToNextRuuvi();
             }

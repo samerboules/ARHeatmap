@@ -242,9 +242,9 @@ namespace MagicLeap
                             DebuggingInfoText.text = "Token Request complete!";
                             //DebuggingInfoText.text = www.downloadHandler.text;
                             //Deserialize the JSON return to extract the token
-                            TokenResponse result = JsonConvert.DeserializeObject<TokenResponse>(www.downloadHandler.text);
-                            token = result.access_token;
-                            DebuggingInfoText.text = result.access_token;
+                            //TokenResponse result = JsonConvert.DeserializeObject<TokenResponse>(www.downloadHandler.text);
+                            //token = result.access_token;
+                            //DebuggingInfoText.text = result.access_token;
                         }
                     }
                 }
