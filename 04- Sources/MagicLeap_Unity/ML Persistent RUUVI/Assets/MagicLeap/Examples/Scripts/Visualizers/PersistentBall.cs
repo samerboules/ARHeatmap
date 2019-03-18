@@ -10,6 +10,11 @@
 // ---------------------------------------------------------------------
 // %BANNER_END%
 
+/* This script is also edited by Samer Boules (samer.boules@ict.nl)
+ * The edited part's function change the deletion of device from touchpad tap into touchpad radial scroll, also use touchpad tap to change menu to next RUUVI data
+ * 
+ * 18 March 2019
+ */
 using System;
 using UnityEngine;
 using UnityEngine.XR.MagicLeap;
@@ -84,6 +89,10 @@ namespace MagicLeap
         /// </summary>
         /// <param name="controllerId">Controller Id</param>
         /// <param name="gesture">Touchpad Gesture</param>
+        /// 
+        //This function is edited by Samer Boules
+        //I changed the deletion of device from touchpad tap into touchpad Radial Scroll.
+        //Added functionality is to detect the touchpad tap when the device is highlighted, when detected, switch the displayed menu to the next Ruuvi data
         private void HandleControllerTouchpadGestureStart(byte controllerId, MLInputControllerTouchpadGesture gesture)
         {
             if (_controllerConnectionHandler != null
@@ -101,8 +110,8 @@ namespace MagicLeap
             {
 
                 //If highlighted and touchpad tap, switch to next RUUVI data
-                ConNXTUpdate _ConNXTUpdate = gameObject.GetComponent<ConNXTUpdate>();
-                _ConNXTUpdate.SetTextsToNextRuuvi();
+                UpdateUI _UpdateUI = gameObject.GetComponent<UpdateUI>();
+                _UpdateUI.SetTextsToNextRuuvi();
             }
         }
         #endregion

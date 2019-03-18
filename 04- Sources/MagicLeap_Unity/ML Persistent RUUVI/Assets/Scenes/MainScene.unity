@@ -356,7 +356,7 @@ Transform:
   - {fileID: 419001325}
   - {fileID: 1713971175}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &247585907
 Prefab:
@@ -647,6 +647,7 @@ GameObject:
   - component: {fileID: 1044815950}
   - component: {fileID: 1044815951}
   - component: {fileID: 1044815952}
+  - component: {fileID: 1044815953}
   m_Layer: 0
   m_Name: PersistenceExample
   m_TagString: Untagged
@@ -678,7 +679,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d83e1102c3c64b0d9f72165ce7ce2d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DebuggingInfoText: {fileID: 277708166}
   _content: {fileID: 1939955073232520, guid: 0ef3f1a49bdc5e74fa3fc2b975ff5042, type: 2}
   _statusText: {fileID: 81474382}
   _destroyedContentEffect: {fileID: 1014929301798422, guid: c2be29d1fdb54da48824088fe1dde67d,
@@ -702,6 +702,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _privileges: c9000000ab000000
+--- !u!114 &1044815953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1044815949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 98547dc3e0501114b95b1a8fca9787c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DebuggingInfoText: {fileID: 277708166}
 --- !u!1 &1096231912
 GameObject:
   m_ObjectHideFlags: 0
@@ -850,7 +862,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Created Sensors: <color=green>{0}</color>/<color=red>{1}</color>'
+  m_Text: 'Created Content: <color=green>{0}</color>/<color=red>{1}</color>'
 --- !u!222 &1373075701
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -901,7 +913,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1424578365
 MonoBehaviour:
@@ -1143,7 +1155,7 @@ Transform:
   - {fileID: 1462129512}
   - {fileID: 2040859673}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1799388099
 Prefab:
@@ -1182,7 +1194,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4486541323493368, guid: b6af97b52b3429641aa904690975fa80, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 114301182059694268, guid: b6af97b52b3429641aa904690975fa80,
         type: 2}
@@ -1207,7 +1219,7 @@ Prefab:
     - target: {fileID: 114301182059694268, guid: b6af97b52b3429641aa904690975fa80,
         type: 2}
       propertyPath: m_DisconnectedComponentArea
-      value: 0
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 114301182059694268, guid: b6af97b52b3429641aa904690975fa80,
         type: 2}

@@ -207,6 +207,7 @@ namespace UnityEngine.XR.MagicLeap
                 Binding.GameObject = this.gameObject;
                 MLContentBinder.Restore(Binding, HandleBindingRestore);
             }
+
         }
 
         /// <summary>

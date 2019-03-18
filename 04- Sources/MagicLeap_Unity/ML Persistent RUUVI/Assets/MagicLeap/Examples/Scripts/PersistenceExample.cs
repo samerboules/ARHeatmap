@@ -10,15 +10,16 @@
 // ---------------------------------------------------------------------
 // %BANNER_END%
 
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking;
 using UnityEngine.UI;
 using UnityEngine.XR.MagicLeap;
+
+
+
+
+
 
 namespace MagicLeap
 {
@@ -31,9 +32,9 @@ namespace MagicLeap
     public class PersistenceExample : MonoBehaviour
     {
         #region Private Variables
-        public Text DebuggingInfoText = null;
+        
 
-        [SerializeField, Tooltip("Content to create")]
+		[SerializeField, Tooltip("Content to create")]
         GameObject _content;
         List<MLPersistentBehavior> _pointBehaviors = new List<MLPersistentBehavior>();
 
@@ -162,7 +163,8 @@ namespace MagicLeap
         }
         #endregion // Unity Methods
 
-        #region Event Handlers
+        
+		#region Event Handlers
         /// <summary>
         ///
         /// </summary>
@@ -186,210 +188,330 @@ namespace MagicLeap
             }
         }
 
+        
 
 
 
 
-        private string tokenEndPoint = "https://beta.connxt.eu/connect/token";
-        //EndPoint to get the devices
-        private string devicesEndPoint = "https://beta.connxt.eu/api/Devices";
-        //ConNXT credential
-        private string clientID = "52840b9f-23db-475d-a920-272217be4402";
-        private string clientSecret = "ZTXMI5Em/676HmLL0WUQUQ==";
-
-        // Structure to hold the data for each RUUVI tag
-        public struct RuuviTag
-        {
-            public string _deviceID;
-            public string _timeStamp;
-            public string _temperature;
-            public string _humidity;
-            public string _pressure;
-            public string _accelerationX;
-            public string _accelerationY;
-            public string _accelerationZ;
-        }
-
-        //Array of Ruuvis, each element corresponds to a Ruuvi Tag
-        public RuuviTag[] Ruuvis;
-
-        //This class is used to break down the Json of Token
-        private class TokenResponse
-        {
-            public string access_token { get; set; }
-            public int expires_in { get; set; }
-            public string token_type { get; set; }
-        }
-        //Token that will be recieved from ConNXT
-        private string token;
-
-        JArray devices;
-        private string telemetryEndPoint;
-
-
-        IEnumerator GetTelemetry()
-        {
-
-            //DebuggingInfoText.text = "Updating data from CONNXT...;
-            //Step 1: Get access token from ConNXT (POST request)
-            //Create new www form
-            WWWForm tokenForm = new WWWForm();
-
-            //Add Fields for POST Request
-            tokenForm.AddField("grant_type", "client_credentials");
-            tokenForm.AddField("client_id", clientID);
-            tokenForm.AddField("client_secret", clientSecret);
-            tokenForm.AddField("scope", "devices:telemetry devices:get");
-
-            using (UnityWebRequest www = UnityWebRequest.Post(tokenEndPoint, tokenForm))
-            {
-                yield return www.SendWebRequest();
-
-                if (www.isNetworkError || www.isHttpError)
-                {
-                    DebuggingInfoText.text = "Network Error: " + www.error;
-                }
-                else
-                {
-                    DebuggingInfoText.text = "CONNXT connection test success, you can create RUUVIs now!";
-                    //DebuggingInfoText.text = www.downloadHandler.text;
-                    //Deserialize the JSON return to extract the token
-                    TokenResponse result = JsonConvert.DeserializeObject<TokenResponse>(www.downloadHandler.text);
-                    token = result.access_token;
-
-
-                    DebuggingInfoText.text = result.access_token;
-                }
-            }
-
-            WWWForm devicesForm = new WWWForm();
-
-            //Add Fields for POST Request
-            devicesForm.AddField("grant_type", "client_credentials");
-            devicesForm.AddField("client_id", clientID);
-            devicesForm.AddField("client_secret", clientSecret);
-            devicesForm.AddField("scope", "devices:telemetry devices:get");
-
-            //Step 2: Get the number of devices on ConNXT (GET request)
-            Dictionary<string, string> headers_ = devicesForm.headers;
-            headers_["Authorization"] = "Bearer " + token;
-
-            //Perform GET Request
-            WWW DevicesRequest = new WWW(devicesEndPoint, null, headers_);
-
-            //Wait until DevicesRequest retuns
-            yield return DevicesRequest;
-            devices = JArray.Parse(DevicesRequest.text);
-
-            //Create array of RuuviTag structs by the number of devices found
-            Ruuvis = new RuuviTag[devices.Count];
-
-            DebuggingInfoText.text = "Devices: " + devices.Count.ToString();
-
-            //Step 3: Loop over all devices and read the telemetry data (GET request)
-            int localindex = 0;
-
-            foreach (JObject device in devices)
-            {
-                string deviceId = device["deviceUid"].Value<string>();
-
-                Ruuvis[localindex]._deviceID = deviceId;
-
-                WWWForm telemetryForm = new WWWForm();
-                //Add Fields for POST Request
-                telemetryForm.AddField("grant_type", "client_credentials");
-                telemetryForm.AddField("client_id", clientID);
-                telemetryForm.AddField("client_secret", clientSecret);
-                telemetryForm.AddField("scope", "devices:telemetry devices:get");
-
-                Dictionary<string, string> TelemetryHeaders = telemetryForm.headers;
-                TelemetryHeaders["Authorization"] = "Bearer " + token;
-                telemetryEndPoint = $"https://beta.connxt.eu/api/Telemetry/{deviceId}/latest";
-                WWW TelemetryRequest = new WWW(telemetryEndPoint, null, TelemetryHeaders);
-
-                //Wait until TelemetryRequest retuns
-                yield return TelemetryRequest;
-
-                // Retrieve the telemetry for the device
-                string telemetryString = TelemetryRequest.text;
-                if (!string.IsNullOrEmpty(telemetryString))
-                {
-                    // Loop over the telemetry values
-                    JObject telemetry = JObject.Parse(telemetryString);
-
-                    //Update timestamp in structure
-                    Ruuvis[localindex]._timeStamp = telemetry["messageTimeStamp"].ToString();
-
-                    foreach (JObject dataPoint in telemetry["dataPoints"] as JArray)
-                    {
-                        //Fill the structure with the updated data
-                        if (dataPoint["key"].ToString() == "AccelerationX")
-                        {
-                            Ruuvis[localindex]._accelerationX = dataPoint["value"].ToString();
-                        }
-                        else if (dataPoint["key"].ToString() == "AccelerationY")
-                        {
-                            Ruuvis[localindex]._accelerationY = dataPoint["value"].ToString();
-                        }
-                        else if (dataPoint["key"].ToString() == "AccelerationZ")
-                        {
-                            Ruuvis[localindex]._accelerationZ = dataPoint["value"].ToString();
-                        }
-                        else if (dataPoint["key"].ToString() == "Temperature")
-                        {
-                            Ruuvis[localindex]._temperature = dataPoint["value"].ToString();
-                        }
-                        else if (dataPoint["key"].ToString() == "Pressure")
-                        {
-                            Ruuvis[localindex]._pressure = dataPoint["value"].ToString();
-                        }
-                        else if (dataPoint["key"].ToString() == "Humidity")
-                        {
-                            Ruuvis[localindex]._humidity = dataPoint["value"].ToString();
-                        }
-                    }
-                }
-                localindex++;
-            }
-
-            DebuggingInfoText.text = "Last Data Update was at " + Ruuvis[4]._timeStamp;
-        }
-
-
-        IEnumerator GetRequest(string uri)
-        {
-            using (UnityWebRequest webRequest = UnityWebRequest.Get(uri))
-            {
-                // Request and wait for the desired page.
-                yield return webRequest.SendWebRequest();
-
-                string[] pages = uri.Split('/');
-                int page = pages.Length - 1;
-
-                if (webRequest.isNetworkError)
-                {
-                    DebuggingInfoText.text = "Error: " + webRequest.error;
-                }
-                else
-                {
-                    DebuggingInfoText.text = "Connected to the Internet. Testing CONNXT connection...";
-                    StartCoroutine(GetTelemetry());
-                }
-            }
-        }
-
-        void UpdateData()
-        {
-            StartCoroutine(GetRequest("https://beta.connxt.eu"));
-        }
 
 
 
 
-  
 
 
-        /// <summary>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		/// <summary>
         /// Responds to privilege requester result.
         /// </summary>
         /// <param name="result"/>
@@ -411,8 +533,8 @@ namespace MagicLeap
             _statusText.text = "Status: Starting up Systems";
 
 
-            // start the UpdateData repeating function every 60seconds
-            InvokeRepeating("UpdateData", 0f, 60f);
+
+
 
 
             result = MLPersistentStore.Start();

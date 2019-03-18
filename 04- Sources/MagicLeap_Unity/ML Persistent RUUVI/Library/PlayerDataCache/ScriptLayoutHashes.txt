@@ -4,7 +4,7 @@ C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/05- Executables/Magic_Lea
 SceneListBegin?
 Assets/Scenes/MainScene.unity
 SceneListEnd?
-850f868f3fbc85576d7af4d05ab80f27 Assembly-CSharp.dll:MagicLeap.PersistenceExample
+588c819a9e0309a4f768ae93ee4e7341 Assembly-CSharp.dll:MagicLeap.PersistenceExample
 fe902a933c0490bd346cdfe28ceb165e Assembly-CSharp.dll:UnityEngine.XR.MagicLeap.MagicLeapSceneOptimizer
 2e8cfc26f4340f46bcab6a80393bf6bd Assembly-CSharp.dll:MagicLeap.LightTrackingExample
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
@@ -215,7 +215,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:MagicLeap.ControllerFeedbackExample
 85ba8bd8018aaed202c3feea9466c4bb Assembly-CSharp.dll:.InternetChecker
-8f70cf7071fa60df8479354375b69bdf Assembly-CSharp.dll:MagicLeap.ConNXTUpdate
+2f8113738538730a3993ad515309fcec Assembly-CSharp.dll:MagicLeap.UpdateUI
 4811f0dfd53a3da0aad4f579f1922ee8 Assembly-CSharp.dll:MagicLeap.PlacementVisualizer
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 0ccd1f40c3aa78c3b00035f0d9decce4 Assembly-CSharp.dll:MagicLeap.MeshingExample
@@ -236,3 +236,4 @@ bd8dba5f8f9406c24767e50bdfeaf214 Assembly-CSharp.dll:UnityEngine.XR.MagicLeap.Co
 66eb4003e71585f0ef4c23034c2aa3b2 Assembly-CSharp.dll:MagicLeap.VirtualPointer
 08a92322e38205b685c92fa359d21d7a Assembly-CSharp.dll:MagicLeap.MeshingVisualizer
 2c832bb50381ee4d40b2f62c67f06a67 Assembly-CSharp.dll:MagicLeap.DeepSeaExplorerLauncher
+adc2d434c9a62722dda6e77bb734dbbf Assembly-CSharp.dll:.UpdateFromConNXT
