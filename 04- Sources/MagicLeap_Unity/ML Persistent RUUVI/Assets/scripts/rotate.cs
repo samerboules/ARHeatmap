@@ -14,7 +14,8 @@ public class rotate : MonoBehaviour {
     }
 	
 	// Update is called once per frame
-	void Update () {
+	void Update()
+    {
         // Rotate the object to face the camera.
         float rotSpeed = Time.deltaTime * 5f;
         Quaternion rotTo = Quaternion.LookRotation(transform.position - _camera.transform.position);

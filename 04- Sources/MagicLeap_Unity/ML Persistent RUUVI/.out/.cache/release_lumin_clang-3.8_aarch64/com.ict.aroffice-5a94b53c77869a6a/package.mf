@@ -2,23 +2,23 @@
  "entries": [
   {
    "compression": 8,
-   "hash": "cc5b25a9c9dd20ef958b5baee1cedad065358db0",
+   "hash": "f17c1645e0244d1a5cbc80523784ea00c195edcc",
    "pkgpath": "Data/095890d8c9bde1a45b549a17e6e6f961",
    "size": 5036,
    "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/095890d8c9bde1a45b549a17e6e6f961"
   },
   {
    "compression": 8,
-   "hash": "6a1ea64b3a370f2400f15f1b593a3915a3f297ef",
+   "hash": "c232a6cf4a4b8b97211c6cdc994a2befc0ab45a9",
    "pkgpath": "Data/Managed/Metadata/global-metadata.dat",
-   "size": 5592956,
+   "size": 5599236,
    "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/Managed/Metadata/global-metadata.dat"
   },
   {
    "compression": 8,
-   "hash": "8073dc0e1e2be565503d9000970ef5a3b00e795a",
+   "hash": "fa3f19bcf8933c0b5b630b30a7cc0926adf27ab6",
    "pkgpath": "bin/libil2cpp.so",
-   "size": 66391544,
+   "size": 66471720,
    "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/Native/libil2cpp.so",
    "xfrm_flags": {
     "signed": {
@@ -29,9 +29,9 @@
      "version": 3
     }
    },
-   "xfrm_hash": "a0076b37faddc274eaf8650d065b0c7b155183d6",
+   "xfrm_hash": "9a6c6b0d4381a7c9234b557d4a9cbbce017b2e86",
    "xfrm_path": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/.out/.cache/release_lumin_clang-3.8_aarch64/com.ict.aroffice-5a94b53c77869a6a\\libil2cpp.so-c954817bcfb7012a",
-   "xfrm_size": 66392302
+   "xfrm_size": 66472478
   },
   {
    "compression": 8,
@@ -202,28 +202,28 @@
   },
   {
    "compression": 8,
-   "hash": "9963800ddc76ee0129bb52199f6bc9b24b019d7f",
+   "hash": "55e402027857e051a564f4e7610e3a491dcce2bd",
    "pkgpath": "Data/cc6e276adac1ef34da0ac9dd1e61c608",
    "size": 4264,
    "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/cc6e276adac1ef34da0ac9dd1e61c608"
   },
   {
    "compression": 8,
-   "hash": "e063b8deeb942bc9437f7aeab340cad4aba0ff60",
+   "hash": "2ca984a57f5ce65b36f48490b2799310270d7d92",
    "pkgpath": "Data/globalgamemanagers",
-   "size": 36320,
+   "size": 36520,
    "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/globalgamemanagers"
   },
   {
    "compression": 8,
-   "hash": "2ee4cc37c5d6cf480edea74079d8ffbfb9075f94",
+   "hash": "a15e8dadb3bea2050055c46f477da3706067c0be",
    "pkgpath": "Data/globalgamemanagers.assets",
-   "size": 38016,
+   "size": 38376,
    "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/globalgamemanagers.assets"
   },
   {
    "compression": 8,
-   "hash": "ee9aa08c0e582b6aaf2a3ed11f871de3b45a59de",
+   "hash": "30f8af219aa6bfee35531e56b233dfeadeeae421",
    "pkgpath": "Data/level0",
    "size": 28404,
    "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/level0"
@@ -237,16 +237,16 @@
   },
   {
    "compression": 8,
-   "hash": "e6189ae14e5968eea226f7bf76561852940b7330",
+   "hash": "a3ff820892c6718e3d5453b4f6369f906f4014ae",
    "pkgpath": "Data/sharedassets0.assets",
-   "size": 2647192,
+   "size": 2660360,
    "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/sharedassets0.assets"
   },
   {
    "compression": 8,
-   "hash": "171b088d0a78ac4bb6a0e95185343e7e71f57b0e",
+   "hash": "07cced33ea6e173d9a41e440dfbc8701f8439ab3",
    "pkgpath": "Data/sharedassets0.assets.resS",
-   "size": 7649592,
+   "size": 7649616,
    "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/sharedassets0.assets.resS"
   },
   {

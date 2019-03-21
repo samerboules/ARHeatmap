@@ -146,10 +146,13 @@
     <Compile Include="Assets\MagicLeap\Examples\Scripts\Visualizers\VideoCaptureVisualizer.cs" />
     <Compile Include="Assets\MagicLeap\Examples\Scripts\WorldScaleExample.cs" />
     <Compile Include="Assets\MagicLeap\Scripts\MLVersion.cs" />
+    <Compile Include="Assets\MoveToGround.cs" />
     <Compile Include="Assets\scripts\Control.cs" />
     <Compile Include="Assets\scripts\MeshingScript.cs" />
     <Compile Include="Assets\scripts\rotate.cs" />
+    <Compile Include="Assets\scripts\UpdateCircleColor.cs" />
     <Compile Include="Assets\scripts\UpdateFromConNXT.cs" />
+    <Compile Include="Assets\scripts\UpdateParticlesColor.cs" />
     <Compile Include="Assets\scripts\UpdateUI.cs" />
     <None Include="Assets\MagicLeap\BackgroundMusicExample\readme.txt" />
     <None Include="Assets\MagicLeap\Examples\Shaders\PointCloud.shader" />

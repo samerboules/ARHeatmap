@@ -37,6 +37,7 @@ namespace MagicLeap
 		[SerializeField, Tooltip("Content to create")]
         GameObject _content;
         List<MLPersistentBehavior> _pointBehaviors = new List<MLPersistentBehavior>();
+        public int countOfPointBehaviours;
 
         [SerializeField, Tooltip("Status Text")]
         Text _statusText;
@@ -53,7 +54,7 @@ namespace MagicLeap
         [SerializeField, Tooltip("Text to count created objects")]
         Text _countCreatedText;
         string _countCreatedTextFormat;
-        int _countCreatedGood = 0;
+        public int _countCreatedGood = 0;
         int _countCreatedBad = 0;
 
         [SerializeField, Tooltip("Visualizers to enable when the privilege is granted")]
@@ -697,6 +698,7 @@ namespace MagicLeap
             MLPersistentBehavior persistentBehavior = gameObj.GetComponent<MLPersistentBehavior>();
             persistentBehavior.UniqueId = Guid.NewGuid().ToString();
             _pointBehaviors.Add(persistentBehavior);
+            countOfPointBehaviours++;
             AddContentListeners(persistentBehavior);
         }
 

@@ -123,14 +123,13 @@ public class UpdateFromConNXT : MonoBehaviour {
             }
             else
             {
-                DebuggingInfoText.text = "CONNXT connection test success, you can create RUUVIs now!";
+                DebuggingInfoText.text = "Updating data, please wait... (CONNXT connection test success)";
                 //DebuggingInfoText.text = www.downloadHandler.text;
                 //Deserialize the JSON return to extract the token
                 TokenResponse result = JsonConvert.DeserializeObject<TokenResponse>(www.downloadHandler.text);
                 token = result.access_token;
 
-
-                DebuggingInfoText.text = result.access_token;
+                DebuggingInfoText.text = "Updating data, please wait... (Token acquired)";
             }
         }
 
@@ -157,7 +156,7 @@ public class UpdateFromConNXT : MonoBehaviour {
         //Create array of RuuviTag structs by the number of devices found
         Ruuvis = new RuuviTag[devices.Count];
 
-        DebuggingInfoText.text = "Devices: " + devices.Count.ToString();
+        DebuggingInfoText.text = "Updating data, please wait... Number of active devices on ConNXT: " + devices.Count.ToString();
 
         //Step 3: Loop over all devices and read the telemetry data (GET request)
         int localindex = 0;
@@ -225,7 +224,7 @@ public class UpdateFromConNXT : MonoBehaviour {
             localindex++;
         }
 
-        DebuggingInfoText.text = "Last Data Update was at " + Ruuvis[4]._timeStamp;
+        DebuggingInfoText.text = "Update Complete.\nLast update was at: " + Ruuvis[4]._timeStamp;
     }
 
     /*******************************************************************
@@ -327,14 +326,10 @@ public class UpdateFromConNXT : MonoBehaviour {
     {
         StartCoroutine(GetRequest("https://beta.connxt.eu"));
     }
+
     // Use this for initialization
     void Start () {
         // start the UpdateData repeating function every 60seconds
         InvokeRepeating("UpdateData", 0f, 60f);
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 }
