@@ -199,11 +199,39 @@ namespace MagicLeap
             */
         }
 
-      void Update()
+        static public GameObject getChildGameObject(GameObject fromGameObject, string withName)
         {
-           // PersistenceExample _PersistenceExample = gameObject.GetComponent<PersistenceExample>();
-           // count = _PersistenceExample.countOfPointBehaviours;
-           // MySpecificIndex.text = "count: " + count.ToString();
+            //Author: Isaac Dart, June-13.
+            Transform[] ts = fromGameObject.transform.GetComponentsInChildren<Transform>();
+            foreach (Transform t in ts) if (t.gameObject.name == withName) return t.gameObject;
+            return null;
+        }
+
+        void Update()
+        {
+            GameObject _MeshingNodes = GameObject.Find("MeshingNodes");
+            Control _Control = _MeshingNodes.GetComponent<Control>();
+
+            //GameObject _ps = GameObject.Find("PSSunSurface");
+            //ParticleSystem _ParticleSystem = _ps.GetComponent<ParticleSystem>();
+
+            if (_Control.areParticlesActive == true)
+            {
+                GameObject _go = getChildGameObject(this.gameObject, "PSSunSurface");
+                ParticleSystem particle = _go.GetComponent<ParticleSystem>();
+                particle.Play();
+                //particle.enableEmission = true;
+            }
+            else if (_Control.areParticlesActive == false)
+            {
+                GameObject _go = getChildGameObject(this.gameObject, "PSSunSurface");
+                ParticleSystem particle = _go.GetComponent<ParticleSystem>();
+                particle.Stop();
+            }
+
+            // PersistenceExample _PersistenceExample = gameObject.GetComponent<PersistenceExample>();
+            // count = _PersistenceExample.countOfPointBehaviours;
+            // MySpecificIndex.text = "count: " + count.ToString();
         }
 #endregion
 

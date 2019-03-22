@@ -18,6 +18,7 @@ namespace MagicLeap
         void Start()
         {
             ps = GetComponent<ParticleSystem>();
+            //ps.gameObject.SetActive(false);
         }
 
         Color GenerateColorFromRange(float minimum, float maximum, float value)
@@ -84,6 +85,19 @@ namespace MagicLeap
 
         void Update()
         {
+#if false
+            GameObject _MeshingNodes = GameObject.Find("MeshingNodes");
+            Control _Control = _MeshingNodes.GetComponent<Control>();
+
+            if (_Control.areParticlesActive == true)
+            {
+                ps.gameObject.SetActive(true);
+            }
+            else
+            {
+                ps.gameObject.SetActive(false);
+            }
+#endif
             UpdateUI _UpdateUI = transform.parent.gameObject.GetComponent<UpdateUI>();
 
             //Set the Color to the values gained from the Sliders
@@ -91,7 +105,7 @@ namespace MagicLeap
             //m_NewColor = GetColorFromRedYellowGreenGradient(_UpdateUI.currentTemperature);
 
             Color[] colorRange = { new Color(50, 255, 100), new Color(150, 150, 50), new Color(255, 0, 0) };
-            m_NewColor = convert_to_rgb(20, 40, _UpdateUI.currentTemperature, colorRange);
+            m_NewColor = convert_to_rgb(10, 50, _UpdateUI.currentTemperature, colorRange);
 
             if (_UpdateUI.currentTemperature == 0)
             {

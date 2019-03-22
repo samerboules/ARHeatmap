@@ -20,6 +20,8 @@ public class Control : MonoBehaviour
     private bool _held = false;
     private float _startTime = 0.0f;
     private MeshingScript _meshing;
+
+    public bool areParticlesActive = false;
     #endregion
 
     #region Unity Methods
@@ -31,6 +33,9 @@ public class Control : MonoBehaviour
         // Add button callbacks
         MLInput.OnControllerButtonDown += HandleOnButtonDown;
         MLInput.OnControllerButtonUp += HandleOnButtonUp;
+
+        // Add gestures callback
+        MLInput.OnControllerTouchpadGestureStart += HandleControllerTouchpadGestureStart;
 
         // Assign meshing component
         _meshing = GetComponent<MeshingScript>();
@@ -105,6 +110,22 @@ public class Control : MonoBehaviour
             // Start bumper timer
             _startTime = Time.time;
             BtnState = ButtonStates.Pressed;
+        }
+    }
+
+    private void HandleControllerTouchpadGestureStart(byte controllerId, MLInputControllerTouchpadGesture gesture)
+    {
+        if (gesture.Type == MLInputControllerTouchpadGestureType.Tap)
+        {
+            //Turn on/off particle systems
+            if (areParticlesActive == true)
+            {
+                areParticlesActive = false;
+            }
+            else
+            {
+                areParticlesActive = true;
+            }
         }
     }
     #endregion

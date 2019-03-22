@@ -127,3 +127,11 @@ Preset:
     propertyPath: m_StereoSeparation
     value: 0.022
     objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_StabilizationDistance
+    value: 0
+    objectReference: {fileID: 0}
+  - target: {fileID: 0}
+    propertyPath: m_StabilizationMode
+    value: 0
+    objectReference: {fileID: 0}

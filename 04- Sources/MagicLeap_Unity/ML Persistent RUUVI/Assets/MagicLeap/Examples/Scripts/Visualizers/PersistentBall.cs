@@ -106,7 +106,7 @@ namespace MagicLeap
             }
             else if (_controllerConnectionHandler != null
                 && _controllerConnectionHandler.IsControllerValid(controllerId)
-                && gesture.Type == MLInputControllerTouchpadGestureType.Tap)
+                && gesture.Type == MLInputControllerTouchpadGestureType.Swipe)
             {
 
                 //If highlighted and touchpad tap, switch to next RUUVI data
