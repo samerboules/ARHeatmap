@@ -16,9 +16,9 @@
   },
   {
    "compression": 8,
-   "hash": "566c968ddccec6b1b08434a8e3b8b56aee142610",
+   "hash": "8233e9d0dd85b191917363198f8cc2ec3483fcb4",
    "pkgpath": "bin/libil2cpp.so",
-   "size": 66481208,
+   "size": 66481232,
    "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/Native/libil2cpp.so",
    "xfrm_flags": {
     "signed": {
@@ -29,9 +29,9 @@
      "version": 3
     }
    },
-   "xfrm_hash": "362281f3a53acb717463b5077d0d5db3373d37b2",
+   "xfrm_hash": "7e09f01459e7b8fbf9fb901dff208cbc232b9348",
    "xfrm_path": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/.out/.cache/release_lumin_clang-3.8_aarch64/com.ict.aroffice-5a94b53c77869a6a\\libil2cpp.so-c954817bcfb7012a",
-   "xfrm_size": 66481966
+   "xfrm_size": 66481990
   },
   {
    "compression": 8,
@@ -209,7 +209,7 @@
   },
   {
    "compression": 8,
-   "hash": "61ec5fa143e767223703b97b177bd19256a5457f",
+   "hash": "0371b68e67f06469d4f5b666c8396cfd358b9e72",
    "pkgpath": "Data/globalgamemanagers",
    "size": 36456,
    "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/globalgamemanagers"
@@ -223,7 +223,7 @@
   },
   {
    "compression": 8,
-   "hash": "b90a024550ed73b39599b9917a3b4b9443e1d631",
+   "hash": "ba19caf22be4ebe95d0fe3af543d3f691df438bc",
    "pkgpath": "Data/level0",
    "size": 28404,
    "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/level0"
@@ -237,7 +237,7 @@
   },
   {
    "compression": 8,
-   "hash": "31828ff942b48590cd0d8c4c60fc8502d4d07176",
+   "hash": "03181325e481de92492756a5da4263d9b55ab484",
    "pkgpath": "Data/sharedassets0.assets",
    "size": 2665872,
    "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/sharedassets0.assets"
