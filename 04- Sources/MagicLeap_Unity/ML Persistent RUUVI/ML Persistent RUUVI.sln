@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ML Persistent RUUVI", "Assembly-CSharp.csproj", "{09A0C116-6460-3D43-875B-41DB42AC6A08}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ML Persistent RUUVI", "Assembly-CSharp-firstpass.csproj", "{4A75A15C-0157-E357-069B-83FE5F2482A5}"
+EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ML Persistent RUUVI", "Assembly-CSharp-Editor.csproj", "{823CDDD8-CF2D-B8E3-BDD9-DA01D4C27622}"
 EndProject
 Global
@@ -15,6 +17,10 @@ Global
 		{09A0C116-6460-3D43-875B-41DB42AC6A08}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09A0C116-6460-3D43-875B-41DB42AC6A08}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09A0C116-6460-3D43-875B-41DB42AC6A08}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A75A15C-0157-E357-069B-83FE5F2482A5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A75A15C-0157-E357-069B-83FE5F2482A5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A75A15C-0157-E357-069B-83FE5F2482A5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A75A15C-0157-E357-069B-83FE5F2482A5}.Release|Any CPU.Build.0 = Release|Any CPU
 		{823CDDD8-CF2D-B8E3-BDD9-DA01D4C27622}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{823CDDD8-CF2D-B8E3-BDD9-DA01D4C27622}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{823CDDD8-CF2D-B8E3-BDD9-DA01D4C27622}.Release|Any CPU.ActiveCfg = Release|Any CPU

@@ -65,6 +65,9 @@
     <Compile Include="Assets\MagicLeap\Scripts\Editor\MLVersionMenuItem.cs" />
     <Compile Include="Assets\MagicLeap\Scripts\Editor\MusicExampleBuilder.cs" />
     <None Include="Assets\MagicLeap\Libs\Editor\LuminUnityEditor.xml" />
+    <Reference Include="Assembly-UnityScript">
+      <HintPath>C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.XR.MagicLeap.Editor">
       <HintPath>C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Library/ScriptAssemblies/Unity.XR.MagicLeap.Editor.dll</HintPath>
     </Reference>
@@ -700,6 +703,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{4A75A15C-0157-E357-069B-83FE5F2482A5}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{09A0C116-6460-3D43-875B-41DB42AC6A08}</Project>
       <Name>Assembly-CSharp</Name>

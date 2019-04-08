@@ -240,3 +240,10 @@ c450f93be9a29428b5aa040273196632 Assembly-CSharp.dll:.Control
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:MagicLeap.UpdateParticlesColor
 08a92322e38205b685c92fa359d21d7a Assembly-CSharp.dll:MagicLeap.MeshingVisualizer
 2c832bb50381ee4d40b2f62c67f06a67 Assembly-CSharp.dll:MagicLeap.DeepSeaExplorerLauncher
+783bf6d659235f53a950684dd61ab5b9 Assembly-CSharp-firstpass.dll:.MouseLook
+742715fe833b9e7b9b64df0952056564 Assembly-UnityScript.dll:.CharacterMotor
+8e75c7ff572e377afe5aec0a3c77276b Assembly-UnityScript.dll:.ThirdPersonCamera
+d79de92723477d704d7beb523a6d339a Assembly-UnityScript.dll:.ThirdPersonController
+05524b8f659e7bfe5756d1335fec24ba Assembly-UnityScript.dll:.FPSInputController
+0ea7e3a1b65cd933d7a007e6774c4eaa Assembly-CSharp.dll:.CopyPosition
+43c901f5733b48f61b53f52e6c2855dc Assembly-UnityScript.dll:.PlatformInputController

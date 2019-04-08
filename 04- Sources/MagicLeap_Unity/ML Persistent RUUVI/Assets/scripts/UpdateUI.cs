@@ -217,14 +217,14 @@ namespace MagicLeap
 
             if (_Control.areParticlesActive == true)
             {
-                GameObject _go = getChildGameObject(this.gameObject, "PSSunSurface");
+                GameObject _go = getChildGameObject(this.gameObject, "Fog(SmokeParticle)");
                 ParticleSystem particle = _go.GetComponent<ParticleSystem>();
                 particle.Play();
                 //particle.enableEmission = true;
             }
             else if (_Control.areParticlesActive == false)
             {
-                GameObject _go = getChildGameObject(this.gameObject, "PSSunSurface");
+                GameObject _go = getChildGameObject(this.gameObject, "Fog(SmokeParticle)");
                 ParticleSystem particle = _go.GetComponent<ParticleSystem>();
                 particle.Stop();
             }

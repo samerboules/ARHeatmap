@@ -105,7 +105,7 @@ namespace MagicLeap
             //m_NewColor = GetColorFromRedYellowGreenGradient(_UpdateUI.currentTemperature);
 
             Color[] colorRange = { new Color(50, 255, 100), new Color(150, 150, 50), new Color(255, 0, 0) };
-            m_NewColor = convert_to_rgb(10, 50, _UpdateUI.currentTemperature, colorRange);
+            m_NewColor = convert_to_rgb(20  ,30 , _UpdateUI.currentTemperature, colorRange);
 
             if (_UpdateUI.currentTemperature == 0)
             {
