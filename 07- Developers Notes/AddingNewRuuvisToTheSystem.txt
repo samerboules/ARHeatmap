@@ -1,0 +1,17 @@
+1. Download nrfConnect app on android or iOS.
+2. Flash all Ruuvitags so they are on the same firmware: https://lab.ruuvi.com/dfu/
+	In my application I use firmware "ruuvi_firmware_dfu_1.2.12.zip"
+3. Modify your ConNXT portal and create new RuuviTags 
+	Go to the Devices menu, press Create and choose RuuviTag from the drop down.
+	Use the same naming scheme as for the existing RuuviTags.
+4. On Raspberry Pi, modify the following files
+	A. /home/pi/azure-iot-samples-python-master/iot-hub/Quickstarts/simulated-device-2/ruuvi_to_connxt.py
+		- Modify the array "tags" to have the Ruuvitag MAC address and tag name
+	B. Create 'SendRTXDeviceStatus.py' file (X: Ruuvi tag number from 1 to 12)  in the following directory /home/pi/azure-iot-samples-python-master/iot-hub/Quickstarts/simulated-device-2/
+		- Find the Appliance ID in the message sent and modify it according to the tag name ex: if the tag name is 7, then file name will be 'SendRT7DeviceStatus.py' and ApplianceID will be 'CLRT007'
+	C. /etc/crontab
+		- This is the scheduler for the OS.
+		- Modify the line where you call the SendRTXDeviceStatus.py to include the newly created files.
+5. On Unity project, modify the following:
+	A. Open UpdateUI.cs script, change the value of the int NUMBER_OF_RUUVIS into the desired number.
+ 

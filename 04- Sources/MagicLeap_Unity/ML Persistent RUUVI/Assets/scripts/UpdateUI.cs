@@ -17,6 +17,7 @@ using UnityEngine.XR.MagicLeap;
 using UnityEditor;
 
 
+
 namespace MagicLeap
 {
     public class UpdateUI : MonoBehaviour
@@ -41,6 +42,7 @@ namespace MagicLeap
         #endregion
 
         public float currentTemperature;
+        int NUMBER_OF_RUUVIS = 12;
 
 
         #region Private Variables
@@ -132,7 +134,7 @@ namespace MagicLeap
         //Fifth tap:    currentRuuviDisplayed =2    Menu=2
         public void SetTextsToNextRuuvi()
         {
-            if (currentRuuviDisplayed > 4)
+            if (currentRuuviDisplayed > NUMBER_OF_RUUVIS)
             {
                 currentRuuviDisplayed = 1;
                 PlayerPrefs.SetInt("savedCurrentRuuviDisplayed", currentRuuviDisplayed);

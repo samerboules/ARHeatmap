@@ -4,6 +4,7 @@ C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/05- Executables/Magic_Lea
 SceneListBegin?
 Assets/Scenes/MainScene.unity
 SceneListEnd?
+8e75c7ff572e377afe5aec0a3c77276b Assembly-UnityScript.dll:.ThirdPersonCamera
 f2aa6e54cb5d244ee204a3de1bec9361 Assembly-CSharp.dll:MagicLeap.PersistenceExample
 fe902a933c0490bd346cdfe28ceb165e Assembly-CSharp.dll:UnityEngine.XR.MagicLeap.MagicLeapSceneOptimizer
 2e8cfc26f4340f46bcab6a80393bf6bd Assembly-CSharp.dll:MagicLeap.LightTrackingExample
@@ -21,6 +22,7 @@ ff05dcdf90651c3d98a9cad3df5e471e UnityEngine.Timeline.dll:UnityEngine.Timeline.C
 607d64d2c4bc76ac9876e6f7b9cc7edf UnityEngine.Timeline.dll:UnityEngine.Timeline.TimelineAsset
 807b64adaec8891fb2a3cab4cdad9fa1 Assembly-CSharp.dll:MagicLeap.PlaneVisualizer
 a009dc2dafb0bd639ebb9c3c3419fbb9 Assembly-CSharp.dll:MagicLeap.ImageCaptureVisualizer
+d79de92723477d704d7beb523a6d339a Assembly-UnityScript.dll:.ThirdPersonController
 5483de4c696953560ec4c19273b04475 Assembly-CSharp.dll:MagicLeap.FaceTargetPosition
 cf7de20816d94f40211362e382955e6e Assembly-CSharp.dll:MagicLeap.PCFStatusText
 d13828ddfa3ec84a2dbe7846711c2eac Assembly-CSharp.dll:UnityEngine.XR.MagicLeap.ComboRaycastController
@@ -148,14 +150,17 @@ bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.Audi
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 c98499002504d0f8281d8e267ef2441f Assembly-CSharp.dll:MagicLeap.MobileAppExample
+0ea7e3a1b65cd933d7a007e6774c4eaa Assembly-CSharp.dll:.CopyPosition
 a7cd020caf337fa36394a15785b5ab99 Assembly-CSharp.dll:MagicLeap.ControllerStatusIndicator
 d63377ae9c9caaf6da7a6c1602639cf1 Assembly-CSharp.dll:UnityEngine.XR.MagicLeap.WorldRaycastController
+05524b8f659e7bfe5756d1335fec24ba Assembly-UnityScript.dll:.FPSInputController
 83e6cb6b2ab5776d20963491ed657b46 Assembly-CSharp.dll:MagicLeap.MusicServiceExample
 4e01e17f8cca6ae08eabbf236a6852c9 Assembly-CSharp.dll:MagicLeap.MaterialTilingController
 be1e68782bb8ac63586e29653a1372ce Unity.XR.MagicLeap.dll:UnityEngine.XR.MagicLeap.MLSpatialMapper
 ec5a552838023dd54fb41137feea5ab6 Assembly-CSharp.dll:UnityEngine.XR.MagicLeap.Placement
 7df4da45b772c5cc0907699c36326a1e Assembly-CSharp.dll:MagicLeap.PathAroundObject
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:MagicLeap.UpdateCircleColor
+43c901f5733b48f61b53f52e6c2855dc Assembly-UnityScript.dll:.PlatformInputController
 de4afaf5d0fbe8716b64f994bd2b038a Assembly-CSharp.dll:MagicLeap.DeepSpaceExplorerLauncher
 b070c608a2c3037a3af830af58b00d9b Assembly-CSharp.dll:MagicLeap.DestroyAfterTime
 945801fefbcffd941a047cfc64885083 Assembly-CSharp.dll:UnityEngine.XR.MagicLeap.WorldRaycastEyes
@@ -183,6 +188,7 @@ e9bdabf9265d758d56f01bb188916fa8 UnityEngine.Networking.dll:UnityEngine.Networki
 528ea1fd7c01796fc60c4e2f172ea229 UnityEngine.Networking.dll:UnityEngine.Networking.NetworkTransformVisualizer
 9aaedc255c9788a1c25d2b0407bbcb8f Assembly-CSharp.dll:MagicLeap.PlanesExample
 bd8dba5f8f9406c24767e50bdfeaf214 Assembly-CSharp.dll:UnityEngine.XR.MagicLeap.ComboRaycastHead
+783bf6d659235f53a950684dd61ab5b9 Assembly-CSharp-firstpass.dll:.MouseLook
 f36938efaa7ce487353613298530bb19 Assembly-CSharp.dll:MagicLeap.VideoCaptureExample
 9674758b3e641c81b6373bf74cebaf45 Assembly-CSharp.dll:UnityEngine.XR.MagicLeap.MLPersistentPoint
 60bd7ec0156ebe9c7853f1955096e6b1 Assembly-CSharp.dll:MagicLeap.HandTrackingVisualizer
@@ -238,12 +244,6 @@ c450f93be9a29428b5aa040273196632 Assembly-CSharp.dll:.Control
 470efe9848fbf1a9b88e929732c3cca1 Assembly-CSharp.dll:MagicLeap.PlacementExample
 66eb4003e71585f0ef4c23034c2aa3b2 Assembly-CSharp.dll:MagicLeap.VirtualPointer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:MagicLeap.UpdateParticlesColor
+742715fe833b9e7b9b64df0952056564 Assembly-UnityScript.dll:.CharacterMotor
 08a92322e38205b685c92fa359d21d7a Assembly-CSharp.dll:MagicLeap.MeshingVisualizer
 2c832bb50381ee4d40b2f62c67f06a67 Assembly-CSharp.dll:MagicLeap.DeepSeaExplorerLauncher
-783bf6d659235f53a950684dd61ab5b9 Assembly-CSharp-firstpass.dll:.MouseLook
-742715fe833b9e7b9b64df0952056564 Assembly-UnityScript.dll:.CharacterMotor
-8e75c7ff572e377afe5aec0a3c77276b Assembly-UnityScript.dll:.ThirdPersonCamera
-d79de92723477d704d7beb523a6d339a Assembly-UnityScript.dll:.ThirdPersonController
-05524b8f659e7bfe5756d1335fec24ba Assembly-UnityScript.dll:.FPSInputController
-0ea7e3a1b65cd933d7a007e6774c4eaa Assembly-CSharp.dll:.CopyPosition
-43c901f5733b48f61b53f52e6c2855dc Assembly-UnityScript.dll:.PlatformInputController
