@@ -19,7 +19,16 @@ tags = {
     'C4:BC:81:D9:19:90': 'CLRT001',
     'CC:04:C4:5E:88:70': 'CLRT002',
     'C5:BE:93:03:DF:5B': 'CLRT003',
-    'C7:43:E0:B0:D4:4B': 'CLRT004'
+    'C7:43:E0:B0:D4:4B': 'CLRT004',
+    'FD:A2:AE:0E:64:71': 'CLRT005',
+    'DC:0D:6B:8E:18:08': 'CLRT006',
+    'CE:47:34:CA:DB:60': 'CLRT007',
+    'F4:2F:EB:60:CE:15': 'CLRT008',
+    'F9:0C:D5:D5:9B:6E': 'CLRT009',
+    'E1:5A:43:A0:94:74': 'CLRT010',
+    'EB:E7:95:39:AD:80': 'CLRT011',
+    'E5:19:E0:4D:E6:0C': 'CLRT012'
+    
 }
 
 def UtcNow():
