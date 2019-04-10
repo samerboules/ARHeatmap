@@ -408,16 +408,16 @@
   },
   {
    "compression": 8,
-   "hash": "a7033b21e28bdfabcbc2fa2ecf3acede52a2b56c",
+   "hash": "e615b1fa0ba4d7ed4361f71288b8a6d971627a4a",
    "pkgpath": "Data/Managed/Metadata/global-metadata.dat",
-   "size": 5630116,
+   "size": 5630632,
    "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/Managed/Metadata/global-metadata.dat"
   },
   {
    "compression": 8,
-   "hash": "d939756dfec968cd3c8435c9bedb91eab7af205a",
+   "hash": "344786023df6fb06272560f66d386ae207495840",
    "pkgpath": "bin/libil2cpp.so",
-   "size": 66717240,
+   "size": 66727936,
    "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/Native/libil2cpp.so",
    "xfrm_flags": {
     "signed": {
@@ -428,9 +428,9 @@
      "version": 3
     }
    },
-   "xfrm_hash": "c6d2ba26d65eec18ee9872f656010d6110ebf52a",
+   "xfrm_hash": "6fccae2ace1d1363181283234dc4f3e63323768a",
    "xfrm_path": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/.out/.cache/release_lumin_clang-3.8_aarch64/com.ict.aroffice-5a94b53c77869a6a\\libil2cpp.so-c954817bcfb7012a",
-   "xfrm_size": 66717998
+   "xfrm_size": 66728694
   },
   {
    "compression": 8,
@@ -867,21 +867,21 @@
   },
   {
    "compression": 8,
-   "hash": "de63b5661d410c64b84c5cb1b14d84f91f062dd3",
+   "hash": "2b98977cb15a658edf4f760498c218cc2c167cdc",
    "pkgpath": "Data/globalgamemanagers",
    "size": 46376,
    "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/globalgamemanagers"
   },
   {
    "compression": 8,
-   "hash": "9e15af8c230c16b6578c1e494ef6bd6481aa97ef",
+   "hash": "a44dacfe57caa15bf9dfc9be1a9cd655b74905cc",
    "pkgpath": "Data/globalgamemanagers.assets",
    "size": 39232,
    "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/globalgamemanagers.assets"
   },
   {
    "compression": 8,
-   "hash": "07847e2a1fda1b36c25d72f738925edd5ba0a949",
+   "hash": "d9576855fc542f18a486fd05b971913f5e16a11a",
    "pkgpath": "Data/level0",
    "size": 28404,
    "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/level0"
@@ -895,9 +895,9 @@
   },
   {
    "compression": 8,
-   "hash": "4d2f2455bda6afa2c23501890b8316ac0c69ef58",
+   "hash": "dd288c19b7cca1cd5973057a85eda5baa1753c40",
    "pkgpath": "Data/sharedassets0.assets",
-   "size": 2686696,
+   "size": 2687260,
    "src": "C:/Users/samer.boules/Documents/GitHub/AR_Office_Demo2/04- Sources/MagicLeap_Unity/ML Persistent RUUVI/Temp/StagingArea/Data/sharedassets0.assets"
   },
   {

@@ -224,7 +224,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:MagicLeap.ControllerFeedbackExample
 85ba8bd8018aaed202c3feea9466c4bb Assembly-CSharp.dll:.InternetChecker
-611be8e1dc3a0096aef50f79ec7f73b1 Assembly-CSharp.dll:MagicLeap.UpdateUI
+a4e92178b24f178d95927ff5988f740c Assembly-CSharp.dll:MagicLeap.UpdateUI
 4811f0dfd53a3da0aad4f579f1922ee8 Assembly-CSharp.dll:MagicLeap.PlacementVisualizer
 9de3a22eca9aefadba2d10d5987cefe3 UnityEngine.SpatialTracking.dll:UnityEngine.SpatialTracking.TrackedPoseDriver
 0ccd1f40c3aa78c3b00035f0d9decce4 Assembly-CSharp.dll:MagicLeap.MeshingExample

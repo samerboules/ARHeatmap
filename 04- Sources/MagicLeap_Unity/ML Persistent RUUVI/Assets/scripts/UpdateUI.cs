@@ -27,6 +27,7 @@ namespace MagicLeap
         public Text RUUVINameText = null;
         public Text TemperatureTitleText = null;
         public Text TemperatureText = null;
+        public Text TemperatureBanner= null;
         public Text HumidityTitleText = null;
         public Text HumidityText = null;
         public Text PressureTitleText = null;
@@ -50,7 +51,7 @@ namespace MagicLeap
         private static int deviceSpecificID;
 
         //Which Ruuvi you want to display on 
-        private int currentRuuviDisplayed = 1;
+        private int currentRuuviDisplayed;
 
         int count;
         #endregion
@@ -59,70 +60,40 @@ namespace MagicLeap
         //Reads the latest data on ConNXT for all available RUUVI tags
         void UpdateMenu()
         {
-            //First Run?
-            /*
-            if (!PlayerPrefs.HasKey($"isFirstTime_{objectSpecificIndex}") || PlayerPrefs.GetInt($"isFirstTime_{objectSpecificIndex}") == 1)
-            {
-                // Set and save all your PlayerPrefs here.
-                // Now set the value of isFirstTime to be false in the PlayerPrefs.
-                currentRuuviDisplayed = 1;
-                PlayerPrefs.SetInt($"currentRuuviDisplayed_{objectSpecificIndex}", 1);
-                PlayerPrefs.SetInt($"isFirstTime_{objectSpecificIndex}", 0);
-                PlayerPrefs.Save();
-            }
-            else //Not first run
-            {
-                currentRuuviDisplayed = PlayerPrefs.GetInt($"currentRuuviDisplayed_{objectSpecificIndex}");
-            }
-            */
             SetTextsToRuuviID(currentRuuviDisplayed);
-            //List<MLContentBinding> allBindings = MLPersistentStore.AllBindings;
-            //deviceSpecificID = allBindings.Count;
         }
 
         //Private function that takes the number of Ruuvi you want to display and update the UI texts accordingly
-        //RuuviID range: from 1 to 4 (Don't send in 0 because this is the Raspberry Pi gateway which has no telemetry
+        //RuuviID range: from 1 to 12 (Don't send in 0 because this is the Raspberry Pi gateway which has no telemetry
         private void SetTextsToRuuviID(int RuuviID)
         {
-            UpdateFromConNXT _UpdateFromConNXT = GameObject.Find("PersistenceExample").GetComponent<UpdateFromConNXT>();
-#if false
-            if (_UpdateFromConNXT.Ruuvis[RuuviID]._temperature == null)
+            if (RuuviID == 0 || currentRuuviDisplayed==0 || RuuviID > NUMBER_OF_RUUVIS || currentRuuviDisplayed > NUMBER_OF_RUUVIS)
             {
-                TemperatureTitleText.text = " ";
-                TemperatureText.text = " ";
-                HumidityTitleText.text = " ";
-                HumidityText.text = " ";
-                PressureTitleText.text = " ";
-                PressureText.text = "";
-                AccelXTitleText.text = " ";
-                AccelXText.text = "";
-                AccelYTitleText.text = " ";
-                AccelYText.text = "";
-                AccelZTitleText.text = " ";
-                AccelZText.text = ""; ;
-                LastUpdatedText.text = "Updating...";
+                RuuviID = 1;
+                currentRuuviDisplayed = 1;
             }
-            else
-            {
-#endif
-                currentTemperature = float.Parse(_UpdateFromConNXT.Ruuvis[RuuviID]._temperature, System.Globalization.CultureInfo.InvariantCulture);
 
-                //Update the text fields on the gui
-                RUUVINameText.text = "CoLab RUUVI Tag 00" + RuuviID.ToString() + "\nDeviceID: " + _UpdateFromConNXT.Ruuvis[RuuviID]._deviceID;
-                TemperatureTitleText.text = "Temperature";
-                TemperatureText.text = _UpdateFromConNXT.Ruuvis[RuuviID]._temperature + " °C";
-                HumidityTitleText.text = "Humidity";
-                HumidityText.text = _UpdateFromConNXT.Ruuvis[RuuviID]._humidity + " %";
-                PressureTitleText.text = "Pressure";
-                PressureText.text = _UpdateFromConNXT.Ruuvis[RuuviID]._pressure + " hPa";
-                AccelXTitleText.text = "Acceleration X";
-                AccelXText.text = _UpdateFromConNXT.Ruuvis[RuuviID]._accelerationX + " m/s2";
-                AccelYTitleText.text = "Acceleration Y";
-                AccelYText.text = _UpdateFromConNXT.Ruuvis[RuuviID]._accelerationY + " m/s2";
-                AccelZTitleText.text = "Acceleration Z";
-                AccelZText.text = _UpdateFromConNXT.Ruuvis[RuuviID]._accelerationZ + " m/s2"; ;
-                LastUpdatedText.text = "Last updated on " + _UpdateFromConNXT.Ruuvis[RuuviID]._timeStamp;
-            //}
+            UpdateFromConNXT _UpdateFromConNXT = GameObject.Find("PersistenceExample").GetComponent<UpdateFromConNXT>();
+
+            currentTemperature = float.Parse(_UpdateFromConNXT.Ruuvis[RuuviID]._temperature, System.Globalization.CultureInfo.InvariantCulture);
+
+            //Update the text fields on the gui
+            RUUVINameText.text = "CoLab RUUVI Tag 00" + RuuviID.ToString() + "\nDeviceID: " + _UpdateFromConNXT.Ruuvis[RuuviID]._deviceID;
+            TemperatureTitleText.text = "Temperature";
+            TemperatureText.text = _UpdateFromConNXT.Ruuvis[RuuviID]._temperature + " °C";
+            TemperatureBanner.text = _UpdateFromConNXT.Ruuvis[RuuviID]._temperature + " °C";
+            HumidityTitleText.text = "Humidity";
+            HumidityText.text = _UpdateFromConNXT.Ruuvis[RuuviID]._humidity + " %";
+            PressureTitleText.text = "Pressure";
+            PressureText.text = _UpdateFromConNXT.Ruuvis[RuuviID]._pressure + " hPa";
+            AccelXTitleText.text = "Acceleration X";
+            AccelXText.text = _UpdateFromConNXT.Ruuvis[RuuviID]._accelerationX + " m/s2";
+            AccelYTitleText.text = "Acceleration Y";
+            AccelYText.text = _UpdateFromConNXT.Ruuvis[RuuviID]._accelerationY + " m/s2";
+            AccelZTitleText.text = "Acceleration Z";
+            AccelZText.text = _UpdateFromConNXT.Ruuvis[RuuviID]._accelerationZ + " m/s2"; ;
+            LastUpdatedText.text = "Last updated on " + _UpdateFromConNXT.Ruuvis[RuuviID]._timeStamp;
+        
         }
 
         //Public function called from other modules to display the next Ruuvi data on UI
@@ -134,25 +105,25 @@ namespace MagicLeap
         //Fifth tap:    currentRuuviDisplayed =2    Menu=2
         public void SetTextsToNextRuuvi()
         {
-            if (currentRuuviDisplayed > NUMBER_OF_RUUVIS)
-            {
-                currentRuuviDisplayed = 1;
-                PlayerPrefs.SetInt("savedCurrentRuuviDisplayed", currentRuuviDisplayed);
-                SetTextsToRuuviID(currentRuuviDisplayed);
-            }
-            else
-            {
                 currentRuuviDisplayed = currentRuuviDisplayed + 1;
                 PlayerPrefs.SetInt("savedCurrentRuuviDisplayed", currentRuuviDisplayed);
-                SetTextsToRuuviID(currentRuuviDisplayed);
-            }
+                SetTextsToRuuviID(currentRuuviDisplayed);         
         }
 #endregion
 
 #region Unity Functions
         void Start()
         {
+            currentRuuviDisplayed = PlayerPrefs.GetInt("savedCurrentRuuviDisplayed");
+            if(currentRuuviDisplayed == 0)//First run
+            {
+                currentRuuviDisplayed = 1;
+                PlayerPrefs.SetInt("savedCurrentRuuviDisplayed", currentRuuviDisplayed);
+            }
+            SetTextsToRuuviID(currentRuuviDisplayed);
+
             InvokeRepeating("UpdateMenu", 0f, 10f);
+            
             /*
             if (PlayerPrefs.HasKey("savedDeviceSpecificID"))
             {
@@ -211,6 +182,10 @@ namespace MagicLeap
 
         void Update()
         {
+            //TemperatureBanner.text = PlayerPrefs.GetInt("savedCurrentRuuviDisplayed").ToString();
+            //TemperatureBanner.text = PlayerPrefs.GetInt("savedCurrentRuuviDisplayed").ToString();
+
+
             GameObject _MeshingNodes = GameObject.Find("MeshingNodes");
             Control _Control = _MeshingNodes.GetComponent<Control>();
 
