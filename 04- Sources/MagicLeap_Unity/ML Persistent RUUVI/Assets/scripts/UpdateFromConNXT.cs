@@ -12,6 +12,7 @@ using UnityEngine.Networking;
 public class UpdateFromConNXT : MonoBehaviour {
 
     public Text DebuggingInfoText = null;
+    public Text TimerText = null;
 
 
     //EndPoint to get the token
@@ -21,6 +22,7 @@ public class UpdateFromConNXT : MonoBehaviour {
     //ConNXT credential
     private string clientID = "52840b9f-23db-475d-a920-272217be4402";
     private string clientSecret = "ZTXMI5Em/676HmLL0WUQUQ==";
+    private int timer = 0;
 
     // Structure to hold the data for each RUUVI tag
     public struct RuuviTag
@@ -156,14 +158,17 @@ public class UpdateFromConNXT : MonoBehaviour {
         //Create array of RuuviTag structs by the number of devices found
         Ruuvis = new RuuviTag[devices.Count];
 
-        DebuggingInfoText.text = "Updating data, please wait... Number of active devices on ConNXT: " + devices.Count.ToString();
+        DebuggingInfoText.text = "Number of active devices on ConNXT: " + devices.Count.ToString() + "\nUpdating data, please wait..." ;
+        timer = 0;
 
         //Step 3: Loop over all devices and read the telemetry data (GET request)
         int localindex = 0;
 
-        foreach (JObject device in devices)
+        //foreach (JObject device in devices)
+        for(localindex = 0; localindex < devices.Count; localindex++)
         {
-            string deviceId = device["deviceUid"].Value<string>();
+            string deviceId = devices[localindex]["deviceUid"].Value<string>();
+            DebuggingInfoText.text = "Number of active devices on ConNXT: " + devices.Count.ToString() + "\nUpdating Device " + localindex.ToString() + ", please wait...";
 
             Ruuvis[localindex]._deviceID = deviceId;
 
@@ -221,10 +226,9 @@ public class UpdateFromConNXT : MonoBehaviour {
                     }
                 }
             }
-            localindex++;
-        }
-
-        DebuggingInfoText.text = "Update Complete.\nLast update was at: " + Ruuvis[4]._timeStamp;
+            //localindex++;
+        }   
+        DebuggingInfoText.text = "Update Complete.\nLast update was at: " + Ruuvis[Ruuvis.Length-1]._timeStamp;
     }
 
     /*******************************************************************
@@ -327,9 +331,17 @@ public class UpdateFromConNXT : MonoBehaviour {
         StartCoroutine(GetRequest("https://beta.connxt.eu"));
     }
 
+
+    void stopwatch()
+    {
+        timer++;
+        TimerText.text = timer.ToString();
+    }
+
     // Use this for initialization
     void Start () {
         // start the UpdateData repeating function every 60seconds
         InvokeRepeating("UpdateData", 0f, 60f);
+        InvokeRepeating("stopwatch", 0f, 1f);
     }
 }

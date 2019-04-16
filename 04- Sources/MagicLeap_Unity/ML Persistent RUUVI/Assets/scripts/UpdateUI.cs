@@ -3,6 +3,9 @@
  * Managing the switch to the next menu is done by PersistentBall.cs
  * 18 March 2019
  */
+
+//#define SIMULATION
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -51,15 +54,21 @@ namespace MagicLeap
         private static int deviceSpecificID;
 
         //Which Ruuvi you want to display on 
-        private int currentRuuviDisplayed;
+        private int currentRuuviDisplayed=1;
 
         int count;
-        #endregion
+#if (SIMULATION)
+        int fakeTemperature = 0;
+#endif
+#endregion
 
         #region My Functions
         //Reads the latest data on ConNXT for all available RUUVI tags
         void UpdateMenu()
         {
+#if (SIMULATION)
+            fakeTemperature++;
+#endif
             SetTextsToRuuviID(currentRuuviDisplayed);
         }
 
@@ -72,28 +81,34 @@ namespace MagicLeap
                 RuuviID = 1;
                 currentRuuviDisplayed = 1;
             }
+#if (SIMULATION)
+            currentTemperature = (float)fakeTemperature;
+            TemperatureText.text = fakeTemperature.ToString() + " °C";
+            TemperatureBanner.text = fakeTemperature.ToString() + " °C";
+#else
+             UpdateFromConNXT _UpdateFromConNXT = GameObject.Find("PersistenceExample").GetComponent<UpdateFromConNXT>();
+            if (_UpdateFromConNXT.Ruuvis[RuuviID]._deviceID != null)
+            {
+                //Update the text fields on the gui
+                RUUVINameText.text = "CoLab RUUVI Tag 00" + RuuviID.ToString() + "\nDeviceID: " + _UpdateFromConNXT.Ruuvis[RuuviID]._deviceID;
+                TemperatureTitleText.text = "Temperature";
+                currentTemperature = float.Parse(_UpdateFromConNXT.Ruuvis[RuuviID]._temperature, System.Globalization.CultureInfo.InvariantCulture);
 
-            UpdateFromConNXT _UpdateFromConNXT = GameObject.Find("PersistenceExample").GetComponent<UpdateFromConNXT>();
-
-            currentTemperature = float.Parse(_UpdateFromConNXT.Ruuvis[RuuviID]._temperature, System.Globalization.CultureInfo.InvariantCulture);
-
-            //Update the text fields on the gui
-            RUUVINameText.text = "CoLab RUUVI Tag 00" + RuuviID.ToString() + "\nDeviceID: " + _UpdateFromConNXT.Ruuvis[RuuviID]._deviceID;
-            TemperatureTitleText.text = "Temperature";
-            TemperatureText.text = _UpdateFromConNXT.Ruuvis[RuuviID]._temperature + " °C";
-            TemperatureBanner.text = _UpdateFromConNXT.Ruuvis[RuuviID]._temperature + " °C";
-            HumidityTitleText.text = "Humidity";
-            HumidityText.text = _UpdateFromConNXT.Ruuvis[RuuviID]._humidity + " %";
-            PressureTitleText.text = "Pressure";
-            PressureText.text = _UpdateFromConNXT.Ruuvis[RuuviID]._pressure + " hPa";
-            AccelXTitleText.text = "Acceleration X";
-            AccelXText.text = _UpdateFromConNXT.Ruuvis[RuuviID]._accelerationX + " m/s2";
-            AccelYTitleText.text = "Acceleration Y";
-            AccelYText.text = _UpdateFromConNXT.Ruuvis[RuuviID]._accelerationY + " m/s2";
-            AccelZTitleText.text = "Acceleration Z";
-            AccelZText.text = _UpdateFromConNXT.Ruuvis[RuuviID]._accelerationZ + " m/s2"; ;
-            LastUpdatedText.text = "Last updated on " + _UpdateFromConNXT.Ruuvis[RuuviID]._timeStamp;
-        
+                TemperatureText.text = _UpdateFromConNXT.Ruuvis[RuuviID]._temperature + " °C";
+                TemperatureBanner.text = _UpdateFromConNXT.Ruuvis[RuuviID]._temperature + " °C";
+                HumidityTitleText.text = "Humidity";
+                HumidityText.text = _UpdateFromConNXT.Ruuvis[RuuviID]._humidity + " %";
+                PressureTitleText.text = "Pressure";
+                PressureText.text = _UpdateFromConNXT.Ruuvis[RuuviID]._pressure + " hPa";
+                AccelXTitleText.text = "Acceleration X";
+                AccelXText.text = _UpdateFromConNXT.Ruuvis[RuuviID]._accelerationX + " m/s2";
+                AccelYTitleText.text = "Acceleration Y";
+                AccelYText.text = _UpdateFromConNXT.Ruuvis[RuuviID]._accelerationY + " m/s2";
+                AccelZTitleText.text = "Acceleration Z";
+                AccelZText.text = _UpdateFromConNXT.Ruuvis[RuuviID]._accelerationZ + " m/s2"; ;
+                LastUpdatedText.text = "Last updated on " + _UpdateFromConNXT.Ruuvis[RuuviID]._timeStamp;
+            }
+#endif
         }
 
         //Public function called from other modules to display the next Ruuvi data on UI
@@ -106,71 +121,9 @@ namespace MagicLeap
         public void SetTextsToNextRuuvi()
         {
                 currentRuuviDisplayed = currentRuuviDisplayed + 1;
-                PlayerPrefs.SetInt("savedCurrentRuuviDisplayed", currentRuuviDisplayed);
                 SetTextsToRuuviID(currentRuuviDisplayed);         
         }
-#endregion
 
-#region Unity Functions
-        void Start()
-        {
-            currentRuuviDisplayed = PlayerPrefs.GetInt("savedCurrentRuuviDisplayed");
-            if(currentRuuviDisplayed == 0)//First run
-            {
-                currentRuuviDisplayed = 1;
-                PlayerPrefs.SetInt("savedCurrentRuuviDisplayed", currentRuuviDisplayed);
-            }
-            SetTextsToRuuviID(currentRuuviDisplayed);
-
-            InvokeRepeating("UpdateMenu", 0f, 10f);
-            
-            /*
-            if (PlayerPrefs.HasKey("savedDeviceSpecificID"))
-            {
-                //Get the device Specific ID and the which RUUVI is displayed on this device
-                deviceSpecificID = PlayerPrefs.GetInt("savedDeviceSpecificID");
-                currentRuuviDisplayed = PlayerPrefs.GetInt("savedCurrentRuuviDisplayed");
-            }
-            else
-            {
-                //If this device is just created, then get how many device were created before and use this number as device Specific ID (
-                //ex: if there has been 2 devices created before this one, then the device ID for this device is 2)
-
-                //How many created/restored are there in the list?
-
-                //PlayerPrefs.SetInt("savedDeviceSpecificID", deviceSpecificID);
-                deviceSpecificID++;
-
-                currentRuuviDisplayed = 1;
-                PlayerPrefs.SetInt("savedCurrentRuuviDisplayed", currentRuuviDisplayed);
-            }
-            */
-
-
-            /*
-            if (!PlayerPrefs.HasKey("isFirstTime") || PlayerPrefs.GetInt("isFirstTime") == 1)
-            {
-                // Set and save all your PlayerPrefs here.
-                // Now set the value of isFirstTime to be false in the PlayerPrefs.
-
-                //How many created/restored are there in the list?
-                List<MLContentBinding> allBindings = MLPersistentStore.AllBindings;
-
-                //So I am number (WhateverInTheList + 1)
-                objectSpecificIndex = allBindings.Count + 1;
-
-                //Save this number in the PlayerPrefs
-                PlayerPrefs.SetInt($"objectSpecificIndex_{objectSpecificIndex}", objectSpecificIndex);
-                MySpecificIndex.text = "My Specific Index : " + PlayerPrefs.GetInt($"objectSpecificIndex_{objectSpecificIndex}").ToString();
-                PlayerPrefs.SetInt("isFirstTime", 0);
-                PlayerPrefs.Save();
-            }
-            else
-            {
-                MySpecificIndex.text = "My Specific Index : " + PlayerPrefs.GetInt($"objectSpecificIndex_{objectSpecificIndex}").ToString();
-            }
-            */
-        }
 
         static public GameObject getChildGameObject(GameObject fromGameObject, string withName)
         {
@@ -180,12 +133,21 @@ namespace MagicLeap
             return null;
         }
 
+#endregion
+
+#region Unity Functions
+        void Start()
+        {
+            SetTextsToRuuviID(currentRuuviDisplayed);
+#if (SIMULATION)
+            InvokeRepeating("UpdateMenu", 0f, 1f);
+#else
+            InvokeRepeating("UpdateMenu", 0f, 10f);
+#endif
+        }
+
         void Update()
         {
-            //TemperatureBanner.text = PlayerPrefs.GetInt("savedCurrentRuuviDisplayed").ToString();
-            //TemperatureBanner.text = PlayerPrefs.GetInt("savedCurrentRuuviDisplayed").ToString();
-
-
             GameObject _MeshingNodes = GameObject.Find("MeshingNodes");
             Control _Control = _MeshingNodes.GetComponent<Control>();
 
@@ -205,10 +167,6 @@ namespace MagicLeap
                 ParticleSystem particle = _go.GetComponent<ParticleSystem>();
                 particle.Stop();
             }
-
-            // PersistenceExample _PersistenceExample = gameObject.GetComponent<PersistenceExample>();
-            // count = _PersistenceExample.countOfPointBehaviours;
-            // MySpecificIndex.text = "count: " + count.ToString();
         }
 #endregion
 
