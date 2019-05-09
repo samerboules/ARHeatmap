@@ -16,7 +16,9 @@ def UtcNow():
     
     
 # The device connection string to authenticate the device with your ConNXT hub.
-CONNECTION_STRING = "HostName=connxtv2acceptance-iothub.azure-devices.net;DeviceId=CLGW001;SharedAccessKey=P6GUps40aRBIt0isUE55Ip2qB24vmW1AeMDdZ/zyj6E="
+CONNECTION_STRING = "HostName=connxt-iothub.azure-devices.net;DeviceId=CLGW001;SharedAccessKey=JrGP7ZX7njKebOkVVY9yLb05IIyR1AL19WJ6A1IJDFk="
+
+
 
 # Using the MQTT protocol.
 PROTOCOL = IoTHubTransportProvider.MQTT
@@ -35,9 +37,9 @@ client = IoTHubClient(CONNECTION_STRING, PROTOCOL)
 #Since you will not be implementing commands just yet,  I suggest you send status messages on startup and every hour, so the eventually come back online even when the connection was lost.
 DEVICE_STATUS_GATEWAY = "{                                          \
             \"Timestamp\": \""+UtcNow()+"\",                        \
-			\"DeviceId\": \"CLGW001\",                              \
+            \"DeviceId\": \"CLGW001\",                              \
             \"SubSystem\": \"Device\",                              \
-			\"MessageType\": \"Status\",                            \
+            \"MessageType\": \"Status\",                            \
             \"SystemStatus\": \"Ok\",                               \
             \"SubStates\":                                          \
             [                                                       \
@@ -72,9 +74,73 @@ DEVICE_STATUS_GATEWAY = "{                                          \
             \"Value\": \"\",                                        \
             \"Unit\": \"\",                                         \
             \"Information\": \"\"                                  \
-            }                                                       \
+            },                                                       \
+            {                                                       \
+            \"SubSystem\": \"CLRT005\",                             \
+            \"Status\": \"Ok\",                                     \
+            \"DisplayOrder\": 4,                                    \
+            \"Value\": \"\",                                        \
+            \"Unit\": \"\",                                         \
+            \"Information\": \"\"                                  \
+            },\
+            {                                                       \
+            \"SubSystem\": \"CLRT006\",                             \
+            \"Status\": \"Ok\",                                     \
+            \"DisplayOrder\": 5,                                    \
+            \"Value\": \"\",                                        \
+            \"Unit\": \"\",                                         \
+            \"Information\": \"\"                                  \
+            },\
+            {                                                       \
+            \"SubSystem\": \"CLRT007\",                             \
+            \"Status\": \"Ok\",                                     \
+            \"DisplayOrder\": 6,                                    \
+            \"Value\": \"\",                                        \
+            \"Unit\": \"\",                                         \
+            \"Information\": \"\"                                  \
+            },\
+            {                                                       \
+            \"SubSystem\": \"CLRT008\",                             \
+            \"Status\": \"Ok\",                                     \
+            \"DisplayOrder\": 7,                                    \
+            \"Value\": \"\",                                        \
+            \"Unit\": \"\",                                         \
+            \"Information\": \"\"                                  \
+            },\
+            {                                                       \
+            \"SubSystem\": \"CLRT009\",                             \
+            \"Status\": \"Ok\",                                     \
+            \"DisplayOrder\": 8,                                    \
+            \"Value\": \"\",                                        \
+            \"Unit\": \"\",                                         \
+            \"Information\": \"\"                                  \
+            },\
+            {                                                       \
+            \"SubSystem\": \"CLRT010\",                             \
+            \"Status\": \"Ok\",                                     \
+            \"DisplayOrder\": 9,                                    \
+            \"Value\": \"\",                                        \
+            \"Unit\": \"\",                                         \
+            \"Information\": \"\"                                  \
+            },\
+            {                                                       \
+            \"SubSystem\": \"CLRT011\",                             \
+            \"Status\": \"Ok\",                                     \
+            \"DisplayOrder\": 10,                                    \
+            \"Value\": \"\",                                        \
+            \"Unit\": \"\",                                         \
+            \"Information\": \"\"                                  \
+            },\
+            {                                                       \
+            \"SubSystem\": \"CLRT012\",                             \
+            \"Status\": \"Ok\",                                     \
+            \"DisplayOrder\": 11,                                    \
+            \"Value\": \"\",                                        \
+            \"Unit\": \"\",                                         \
+            \"Information\": \"\"                                  \
+            },\
             ]                                                       \
-			}" 
+            }" 
 
 MSG_TXT = DEVICE_STATUS_GATEWAY
 

@@ -10,7 +10,7 @@ from iothub_client import IoTHubClient, IoTHubClientError, IoTHubTransportProvid
 from iothub_client import IoTHubMessage, IoTHubMessageDispositionResult, IoTHubError, DeviceMethodReturnValue
 
 # The device connection string to authenticate the device with your ConNXT hub.
-CONNECTION_STRING = "HostName=connxtv2acceptance-iothub.azure-devices.net;DeviceId=CLGW001;SharedAccessKey=P6GUps40aRBIt0isUE55Ip2qB24vmW1AeMDdZ/zyj6E="
+CONNECTION_STRING = "HostName=connxt-iothub.azure-devices.net;DeviceId=CLGW001;SharedAccessKey=JrGP7ZX7njKebOkVVY9yLb05IIyR1AL19WJ6A1IJDFk="
 
 # Using the MQTT protocol.
 PROTOCOL = IoTHubTransportProvider.MQTT
@@ -24,19 +24,19 @@ MESSAGE_TIMEOUT = 10000
 #You should send it to show software versions, and other static data but nothing breaks if you don't send it.
 #You can send this message more often, when that static data does change, but typically you should not send this more than a couple of times a day.
 DEVICE_INFO = "{\"Timestamp\": \"2017-06-01T10:00:01.0000000Z\",\
-			\"DeviceId\": \"CLGW001\",\
+            \"DeviceId\": \"CLGW001\",\
             \"SubSystem\": \"Device\",\
-			\"MessageType\": \"DeviceInfo\",\
-			\"DeviceType\": \"Gateway\",\
-			\"HardwareVersion\": \"1\",\
-			\"OperatingSystemVersion\": \"Rasbpian Linux\",\
+            \"MessageType\": \"DeviceInfo\",\
+            \"DeviceType\": \"Gateway\",\
+            \"HardwareVersion\": \"1\",\
+            \"OperatingSystemVersion\": \"Rasbpian Linux\",\
             \"ApplicationVersion\": \"1.0.0\",\
-			\"Parameters\": \
-			{\
-			\"ComputerName\": \"Samer's Raspberry Pi 3\", \
-			\"RobotHWVersion\": \"2\",\
-			\"TransportHWVersion\": \"3\"}\
-			}"
+            \"Parameters\": \
+            {\
+            \"ComputerName\": \"Samer's Raspberry Pi 3\", \
+            \"RobotHWVersion\": \"2\",\
+            \"TransportHWVersion\": \"3\"}\
+            }"
             
 #~2~
 #Every minute send a Device.Telemetry message for each RuuviTag
@@ -44,35 +44,35 @@ DEVICE_INFO = "{\"Timestamp\": \"2017-06-01T10:00:01.0000000Z\",\
 #In your case we'll do that by regularly (every minute?) sending a telemetry messages for each RuubiTag for which we can show the graphs in the portal.
 #For testing you  could do this faster, e.g. every 10 seconds.
 TELEMETRY = "{\"Timestamp\": \"2017-06-01T10:00:03.0000000Z\",\
-			\"DeviceId\": \"CLGW001\",\
+            \"DeviceId\": \"CLGW001\",\
             \"ApplianceId\": \" CLRT001\",\
             \"SubSystem\": \"Device\",\
-			\"MessageType\": \"Telemetry\",\
-			\"Data\": \
-			{\
-			\" AccelerationX\": 0.000, \
-			\" AccelerationY\": 0.000,\
-			\" AccelerationZ\": 0.000,\
+            \"MessageType\": \"Telemetry\",\
+            \"Data\": \
+            {\
+            \" AccelerationX\": 0.000, \
+            \" AccelerationY\": 0.000,\
+            \" AccelerationZ\": 0.000,\
             \" Humidity\": 74,\
             \" Pressure\": 978,\
             \" Rssi\": -34,\
             \" Temperature\": 21.4,\
             \" Voltage\": 2.93\
             }\
-			}"
+            }"
             
 #~3~
 #At startup and every hour send a Device.Status message for each RuuviTag
 #This message must be sent after boot, and as suggested above, every hour for each via BlueTooth connected RuuviTag.
 DEVICE_STATUS_RUUVI = "{\"Timestamp\": \"2017-06-01T10:00:01.0000000Z\",    \
-			\"DeviceId\": \"CLGW001\",                                      \
+            \"DeviceId\": \"CLGW001\",                                      \
             \"ApplianceId\": \"CLRT001\",                                   \
             \"SubSystem\": \"Device\",                                      \
-			\"MessageType\": \"Status\",                                    \
+            \"MessageType\": \"Status\",                                    \
             \"SystemStatus\": \"Ok\",                                       \
             \"SubStates\": [                                                \
             ]                                                               \
-			}" 
+            }" 
             
 #~4~
 #At startup and every hour send a Device.Status message for the gateway
@@ -84,9 +84,9 @@ DEVICE_STATUS_RUUVI = "{\"Timestamp\": \"2017-06-01T10:00:01.0000000Z\",    \
 #Since you will not be implementing commands just yet,  I suggest you send status messages on startup and every hour, so the eventually come back online even when the connection was lost.
 DEVICE_STATUS_GATEWAY = "{                                          \
             \"Timestamp\": \"2017-06-01T10:00:01.0000000Z\",        \
-			\"DeviceId\": \"CLGW001\",                              \
+            \"DeviceId\": \"CLGW001\",                              \
             \"SubSystem\": \"Device\",                              \
-			\"MessageType\": \"Status\",                            \
+            \"MessageType\": \"Status\",                            \
             \"SystemStatus\": \"Ok\",                               \
             \"SubStates\":                                          \
             [                                                       \
@@ -107,7 +107,7 @@ DEVICE_STATUS_GATEWAY = "{                                          \
             \"Information\": \"\"                                  \
             }                                                       \
             ]                                                       \
-			}" 
+            }" 
 
 MSG_TXT = TELEMETRY
 

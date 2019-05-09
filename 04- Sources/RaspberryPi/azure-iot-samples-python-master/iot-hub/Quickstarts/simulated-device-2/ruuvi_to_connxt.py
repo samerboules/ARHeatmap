@@ -36,7 +36,9 @@ def UtcNow():
     return now.strftime("%Y-%m-%dT%H:%M:%S.%fZ")
 
 # The device connection string to authenticate the device with your ConNXT hub.
-CONNECTION_STRING = "HostName=connxtv2acceptance-iothub.azure-devices.net;DeviceId=CLGW001;SharedAccessKey=P6GUps40aRBIt0isUE55Ip2qB24vmW1AeMDdZ/zyj6E="
+CONNECTION_STRING = "HostName=connxt-iothub.azure-devices.net;DeviceId=CLGW001;SharedAccessKey=JrGP7ZX7njKebOkVVY9yLb05IIyR1AL19WJ6A1IJDFk="
+
+
 
 # Using the MQTT protocol.
 PROTOCOL = IoTHubTransportProvider.MQTT

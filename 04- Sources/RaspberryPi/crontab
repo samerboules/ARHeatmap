@@ -16,15 +16,3 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 */01 *  * * *   pi      cd /home/pi/azure-iot-samples-python-master/iot-hub/Quickstarts/simulated-device-2/ && python ruuvi_to_connxt.py
 */3 *  * * *   pi      cd /home/pi/azure-iot-samples-python-master/iot-hub/Quickstarts/simulated-device-2/ && (python SendGatewayDeviceStatus.py ; python SendRT1DeviceStatus.py ; python SendRT2DeviceStatus.py ; python SendRT3DeviceStatus.py ; python SendRT4DeviceStatus.py ; python SendRT5DeviceStatus.py ; python SendRT6DeviceStatus.py ; python SendRT7DeviceStatus.py ; python SendRT8DeviceStatus.py ; python SendRT9DeviceStatus.py ; python SendRT10DeviceStatus.py ; python SendRT11DeviceStatus.py ; python SendRT12DeviceStatus.py)
-#*/10 *  * * *   pi      cd /home/pi/azure-iot-samples-python-master/iot-hub/Quickstarts/simulated-device-2/ && python SendRT1DeviceStatus.py
-#*/10 *  * * *   pi      cd /home/pi/azure-iot-samples-python-master/iot-hub/Quickstarts/simulated-device-2/ && python SendRT2DeviceStatus.py
-#*/10 *  * * *   pi      cd /home/pi/azure-iot-samples-python-master/iot-hub/Quickstarts/simulated-device-2/ && python SendRT3DeviceStatus.py
-#*/10 *  * * *   pi      cd /home/pi/azure-iot-samples-python-master/iot-hub/Quickstarts/simulated-device-2/ && python SendRT4DeviceStatus.py
-#*/10 *  * * *   pi      cd /home/pi/azure-iot-samples-python-master/iot-hub/Quickstarts/simulated-device-2/ && python SendRT5DeviceStatus.py
-#*/10 *  * * *   pi      cd /home/pi/azure-iot-samples-python-master/iot-hub/Quickstarts/simulated-device-2/ && python SendRT6DeviceStatus.py
-#*/10 *  * * *   pi      cd /home/pi/azure-iot-samples-python-master/iot-hub/Quickstarts/simulated-device-2/ && python SendRT7DeviceStatus.py
-#*/10 *  * * *   pi      cd /home/pi/azure-iot-samples-python-master/iot-hub/Quickstarts/simulated-device-2/ && python SendRT8DeviceStatus.py
-#*/10 *  * * *   pi      cd /home/pi/azure-iot-samples-python-master/iot-hub/Quickstarts/simulated-device-2/ && python SendRT9DeviceStatus.py
-#*/10 *  * * *   pi      cd /home/pi/azure-iot-samples-python-master/iot-hub/Quickstarts/simulated-device-2/ && python SendRT10DeviceStatus.py
-#*/10 *  * * *   pi      cd /home/pi/azure-iot-samples-python-master/iot-hub/Quickstarts/simulated-device-2/ && python SendRT11DeviceStatus.py
-#*/10 *  * * *   pi      cd /home/pi/azure-iot-samples-python-master/iot-hub/Quickstarts/simulated-device-2/ && python SendRT12DeviceStatus.py

@@ -16,7 +16,7 @@ def UtcNow():
     
     
 # The device connection string to authenticate the device with your ConNXT hub.
-CONNECTION_STRING = "HostName=connxtv2acceptance-iothub.azure-devices.net;DeviceId=CLGW001;SharedAccessKey=P6GUps40aRBIt0isUE55Ip2qB24vmW1AeMDdZ/zyj6E="
+CONNECTION_STRING = "HostName=connxt-iothub.azure-devices.net;DeviceId=CLGW001;SharedAccessKey=JrGP7ZX7njKebOkVVY9yLb05IIyR1AL19WJ6A1IJDFk="
 
 # Using the MQTT protocol.
 PROTOCOL = IoTHubTransportProvider.MQTT
@@ -32,7 +32,7 @@ client = IoTHubClient(CONNECTION_STRING, PROTOCOL)
 #This message must be sent after boot, and as suggested above, every hour for each via BlueTooth connected RuuviTag.
 DEVICE_STATUS_RUUVI = "{\"Timestamp\": \""+UtcNow()+"\",    \
             \"DeviceId\": \"CLGW001\",                                      \
-            \"ApplianceId\": \"CLRT012\",                                   \
+            \"ApplianceId\": \"CLRT002\",                                   \
             \"SubSystem\": \"Device\",                                      \
             \"MessageType\": \"Status\",                                    \
             \"SystemStatus\": \"Ok\",                                       \
